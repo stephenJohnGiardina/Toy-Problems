@@ -29,7 +29,18 @@ let addTwoNumbers = function(l1, l2) {
     l2Number += removeTail(l2).val * l2Power;
     l2Power /= 10;
   }
-  return l1Number + l2Number;
+  let sum = JSON.stringify(l1Number + l2Number);
+  console.log(sum);
+  let result = new ListNode(Number.parseInt(sum[sum.length - 1]));
+  let previousNode = result;
+  if (sum.length > 1) {
+    for (let i = sum.length - 2; i >= 0; i--) {
+      let newNode = new ListNode(Number.parseInt(sum[i]));
+      previousNode.next = newNode;
+      previousNode = newNode;
+    }
+  }
+  return result;
 }
 
 let getLength = (l) => {
@@ -65,6 +76,10 @@ let removeTail = (l) => {
   return current;
 }
 
+function linkedListToArray(linkedList) {
+
+}
+
 function ListNode(val, next) {
   this.val = val === undefined ? 0 : val;
   this.next = next === undefined ? null : next;
@@ -72,15 +87,25 @@ function ListNode(val, next) {
 
 // TEST SUITE
 
-let l1a = new ListNode(2);
-let l1b = new ListNode(4);
-l1a.next = l1b;
-let l1c = new ListNode(3);
-l1b.next = l1c;
-let l2a = new ListNode(5);
-let l2b = new ListNode(6);
-l2a.next = l2b;
-let l2c = new ListNode(4);
-l2b.next = l2c;
+let arrayToLinkedList = (array) => {
+  let result = new ListNode(array[0]);
+  let previousNode = result;
+  if (array.length > 1) {
+    for (let i = 1; i < array.length; i++) {
+      let newNode = new ListNode(array[i]);
+      previousNode.next = newNode;
+      previousNode = newNode;
+    }
+  }
+  // console.log('Result: ', result)
+  return result;
+}
 
-console.log(addTwoNumbers(l1a, l2a))
+// TEST 1
+
+
+console.log(addTwoNumbers(arrayToLinkedList([2, 4, 3]), arrayToLinkedList([5, 6, 4])))
+
+//TEST 2
+
+console.log(addTwoNumbers(arrayToLinkedList([1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]), arrayToLinkedList([5,6,4])));
