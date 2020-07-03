@@ -73,34 +73,36 @@ let removeTail = (l) => {
 }
 
 function addTwoStrings(str1, str2) {
-  if (str1.length < 11 && str2.length < 11) {
-    return JSON.stringify(Number.parseInt(str1) + Number.parseInt(str2))
-  }
   str1 = reverseString(str1);
   str2 = reverseString(str2);
-  let longerLength = str1 < str2 ? str1.length : str2.length;
+  let longerString = str1.length > str2.length ? str1 : str2;
+  let carry = false;
   let result = '';
-  for (let i = longerLength - 1; i >= 0; i--) {
-    if (str1[i] === undefined) {
-      result += str2[i];
-    } else if (str2[i] === undefined) {
-      result += str1[i]
-    } else {
-      let nextDigit = Number.parseInt(str1[i]) +  Number.parseInt(str2[i])
-      if (nextDigit >= 10) {
-        if (result.length !== 0) {
-          newLastDigist = Number.parseInt(result[result.length - 1]) + 1;
-          result = result.substring(0, result.length - 1)
-          result += newLastDigist;
-          nextDigit = nextDigit - 10;
-        } else {
-          nextDigit = Number.parseInt(str1[i]) +  Number.parseInt(str2[i]);
-        }
-      }
-      result += nextDigit;
+  for (let i = 0; i < longerString.length; i++) {
+    let number1 = Number.parseInt(str1[i]);
+    let number2 = Number.parseInt(str2[i]);
+    let nextNumber;
+    if (!Number.isNaN(number1) && !Number.isNaN(number2)) {
+      nextNumber = number1 + number2;
+    } else if (!Number.isNaN(number1) && Number.isNaN(number2)) {
+      nextNumber = number1;
+    } else if (Number.isNaN(number1) && !Number.isNaN(number2)) {
+      nextNumber = number2;
     }
+    if (carry) {
+      nextNumber++;
+      carry = false;
+    }
+    if (nextNumber >= 10) {
+      carry = true;
+    }
+    let digit = JSON.stringify(nextNumber)[JSON.stringify(nextNumber).length - 1];
+    result = digit + result;
   }
-  return result
+  if (carry) {
+    result = '1' + result;
+  }
+  return result;
 }
 
 function reverseString(str) {
