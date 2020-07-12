@@ -31,8 +31,14 @@ var findMedianSortedArrays = function(nums1, nums2) {
       }
     } else if (max_x > min_y) {
       end = partition_x - 1;
-    } else {
+    } else if (max_x < min_y) {
       start = partition_x + 1;
+    } else {
+      if ((x + y) % 2 === 0) {
+        return (Math.max(max_x, max_y) + Math.min(min_x, min_y)) / 2;
+      } else {
+        return Math.max(max_x, max_y);
+      }
     }
   }
 };
