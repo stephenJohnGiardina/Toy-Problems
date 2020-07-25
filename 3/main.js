@@ -1,24 +1,7 @@
 /**
- * Given a string, find the length of the longest substring without repeating characters.
-
-Example 1:
-
-Input: "abcabcbb"
-Output: 3
-Explanation: The answer is "abc", with the length of 3.
-Example 2:
-
-Input: "bbbbb"
-Output: 1
-Explanation: The answer is "b", with the length of 1.
-Example 3:
-
-Input: "pwwkew"
-Output: 3
-Explanation: The answer is "wke", with the length of 3.
-             Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+ * @param {string} s
+ * @return {number}
  */
-
 var lengthOfLongestSubstring = function(s) {
   let max_len = 0;
   let curr = 0;
@@ -110,20 +93,71 @@ var lengthOfLongestSubstringRecursiveSolution = function(s) {
 
 // TEST 1
 
-console.log(lengthOfLongestSubstring(""));
+function test1() {
+
+  if (lengthOfLongestSubstring("") == 0) {
+    return "✔"
+  }
+  else {
+    return "X"
+  }
+}
+
+console.log(test1())
 
 // TEST 2
 
-console.log(lengthOfLongestSubstring(" "));
+function test2() {
+
+  if (lengthOfLongestSubstring(" ") == 1) {
+    return "✔"
+  }
+  else {
+    return "X"
+  }
+}
+
+console.log(test2())
 
 // TEST 3
 
-console.log(lengthOfLongestSubstring("abcb"));
+function test3() {
+
+  if (lengthOfLongestSubstring("abcb") == 3) {
+    return "✔"
+  }
+  else {
+    return "X"
+  }
+}
+
+console.log(test3())
 
 // TEST 4
 
-console.log(lengthOfLongestSubstring("suqqjkuuxfeinpgjucmoc"));
+function test4() {
+
+  if (lengthOfLongestSubstring("suqqjkuuxfeinpgjucmoc") == 12) {
+    return "✔"
+  }
+  else {
+    return "X"
+  }
+}
+
+console.log(test4())
 
 // TEST 5
 
-console.log(lengthOfLongestSubstring("mrjkdfwfsfjoblbhtjcpdbjdqkvevshhjssnzosstdgwqhelqibumkzcwujsnsbyktlkkgeflkectkpjuqfgdgjbduvqm"));
+
+function test5() {
+
+  if (lengthOfLongestSubstring("mrjkdfwfsfjoblbhtjcpdbjdqkvevshhjssnzosstdgwqhelqibumkzcwujsnsbyktlkkgeflkectkpjuqfgdgjbduvqm") == 12) {
+    return "✔"
+  }
+  else {
+    return "X"
+  }
+}
+
+console.log(test5())
