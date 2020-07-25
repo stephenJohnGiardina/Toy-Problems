@@ -1,16 +1,15 @@
 /**
- *
- * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
-
-You may assume the two numbers do not contain any leading zero, except the number 0 itself.
-
-Example:
-
-Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
-Output: 7 -> 0 -> 8
-Explanation: 342 + 465 = 807.
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
  */
-
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
 let addTwoNumbers = function(l1, l2) {
   if (!l1 || !l2) {
     return null;
@@ -118,7 +117,7 @@ function ListNode(val, next) {
 
 // TEST SUITE
 
-let arrayToLinkedList = (array) => {
+function arrayToLinkedList(array) {
   let result = new ListNode(array[0]);
   let previousNode = result;
   if (array.length > 1) {
@@ -128,26 +127,107 @@ let arrayToLinkedList = (array) => {
       previousNode = newNode;
     }
   }
-  // console.log('Result: ', result)
   return result;
+}
+
+function linkedListToArray(head) {
+  let result = [];
+  while (head !== null) {
+    result.push(head.val);
+    head = head.next;
+  }
+  return result;
+}
+
+function arraysEqual(array1, array2) {
+  if (array1.length !== array2.length) return false;
+  for (let i = 0; i < array1.length; i += 1) {
+    if (array1[i] !== array2[i]) return false;
+  }
+  return true;
 }
 
 // TEST 1
 
-console.log(addTwoNumbers(arrayToLinkedList([2, 4, 3]), arrayToLinkedList([5, 6, 4])))
+function test1() {
+  let l1 = [2, 4, 3];
+  let l2 = [5, 6, 4];
+  let result = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)));
+  let expected = [7, 0, 8];
+  if (arraysEqual(result, expected)) {
+    return "✔";
+  }
+  else {
+    return "X";
+  }
+}
+
+console.log(test1());
 
 // TEST 2
 
-console.log(addTwoNumbers(arrayToLinkedList([5]), arrayToLinkedList([5])))
+function test2() {
+  let l1 = [5];
+  let l2 = [5];
+  let result = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)))
+  let expected = [0, 1];
+  if (arraysEqual(result, expected)) {
+    return "✔";
+  }
+  else {
+    return "X";
+  }
+}
+
+console.log(test2());
 
 // TEST 3
 
-console.log(addTwoNumbers(arrayToLinkedList([1,8]), arrayToLinkedList([0])))
+function test3() {
+  let l1 = [1,8];
+  let l2 = [0];
+  let result = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)));
+  let expected = [1, 8];
+  if (arraysEqual(result, expected)) {
+    return "✔";
+  }
+  else {
+    return "X";
+  }
+}
+
+console.log(test3());
 
 // TEST 4
 
-console.log(addTwoNumbers(arrayToLinkedList([1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]), arrayToLinkedList([5,6,4])));
+function test4() {
+  let l1 = [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1];
+  let l2 = [5,6,4];
+  let result = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)));
+  let expected = [6,6,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1];
+  if (arraysEqual(result, expected)) {
+    return "✔";
+  }
+  else {
+    return "X";
+  }
+}
+
+console.log(test4());
 
 // TEST 5
 
-console.log(addTwoNumbers(arrayToLinkedList([9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9]), arrayToLinkedList([1])));
+function test5() {
+  let l1 = [9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9];
+  l2 = [1];
+  let result = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)));
+  let expected = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1];
+  if (arraysEqual(result, expected)) {
+    return "✔";
+  }
+  else {
+    return "X";
+  }
+}
+
+console.log(test5());
