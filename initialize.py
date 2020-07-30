@@ -7,6 +7,7 @@ def initialize(directory):
   function also initializes the test suite. It doesn't write the tests, but it does write a
   skeleton for the tests.
   """
+  directory = str(directory)
   os.mkdir(directory)
   open(directory + "/README.md", "a+")
   js = open(directory + "/main.js", "a+")
@@ -88,4 +89,4 @@ def initialize(directory):
   for i in range(len(pyContents)):
     py.write(pyContents[i])
 
-# initialize("")
+initialize(24)
