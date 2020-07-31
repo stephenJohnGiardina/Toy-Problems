@@ -32,7 +32,7 @@ def updateProblemList():
     problems.append(fileName.readline()[2:])
   readMe = open("README.md", "a+")
   for i in range(len(problems)):
-    readMe.write("## " + problems[i])
+    readMe.write("#### " + problems[i])
     readMe.write("\n")
   return problems
 
