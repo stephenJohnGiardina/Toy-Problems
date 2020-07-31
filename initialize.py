@@ -68,9 +68,9 @@ def initialize(directory):
     '\n\n',
     'def test1():',
     '\n',
-    '  actual = None:',
+    '  actual = None',
     '\n',
-    '  expected = None:',
+    '  expected = None',
     '\n',
     '  if actual == expected:',
     '\n',
@@ -86,9 +86,9 @@ def initialize(directory):
     '\n\n',
     'def test2():',
     '\n',
-    '  actual = None:',
+    '  actual = None',
     '\n',
-    '  expected = None:',
+    '  expected = None',
     '\n',
     '  if actual == expected:',
     '\n',
@@ -105,4 +105,4 @@ def initialize(directory):
   for i in range(len(pyContents)):
     py.write(pyContents[i])
 
-initialize(24)
+initialize(23)
