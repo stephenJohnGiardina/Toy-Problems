@@ -32,11 +32,11 @@ def updateProblemList():
     problems.append(fileName.readline()[2:])
   readMe = open("README.md", "a+")
   for i in range(len(problems)):
-    readMe.write(problems[i])
+    readMe.write("## " + problems[i])
     readMe.write("\n")
   return problems
 
-# print(updateProblemList())
+updateProblemList()
 
 # This function loops over every directory in the working directory and checks if it has a specific type of file in it. If it does not then it will add that file to that directory.
 
