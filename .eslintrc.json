@@ -18,6 +18,14 @@
         "react"
     ],
     "rules": {
-        "arrow-body-style": ["error", "always"]
-    }
+        "arrow-body-style": ["error", "always"],
+        "prefer-destructuring": ["error", {
+            "array": false,
+            "object": true
+          }, {
+            "enforceForRenamedProperties": false
+          }],
+          "no-console": "off",
+          "no-use-before-define": "off"
+        }
 }

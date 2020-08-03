@@ -2,63 +2,65 @@
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function(s) {
-  let max_len = 0;
+const lengthOfLongestSubstring = (s) => {
+  let maxLen = 0;
   let curr = 0;
-  let hash = {};
-  if(s.length < 2) {
-      return s.length;
+  const hash = {};
+  if (s.length < 2) {
+    return s.length;
   }
-  for(let i = 0; i < s.length;  i++) {
-      if(hash[s[i]] == null) {
-          curr += 1;
-      } else {
-          curr = Math.min(i - hash[s[i]], curr + 1);
-      }
-      max_len = Math.max(max_len, curr);
-      hash[s[i]] = i; //save the index
+  for (let i = 0; i < s.length; i += 1) {
+    if (hash[s[i]] == null) {
+      curr += 1;
+    } else {
+      curr = Math.min(i - hash[s[i]], curr + 1);
+    }
+    maxLen = Math.max(maxLen, curr);
+    hash[s[i]] = i; // save the index
   }
-  return max_len;
+  return maxLen;
 };
 
-var lengthOfLongestSubstringSlidingWondow = function(s) {
+/**
+const lengthOfLongestSubstringSlidingWondow = (s) => {
   if (s.length === 0) {
     return 0;
-  } else if (s.length === 1) {
+  }
+  if (s.length === 1) {
     return 1;
   }
-  let a_position = 0;
-  let b_position = 0;
+  let aPosition = 0;
+  let bPosition = 0;
   let result = 0;
-  while (a_position !== s.length - 1) {
-    let obj = {};
+  while (aPosition !== s.length - 1) {
+    const obj = {};
     while (!Object.values(obj).includes(2)) {
-      let substringLength = s.substring(a_position, b_position).length;
+      const substringLength = s.substring(aPosition, bPosition).length;
       if (substringLength > result) {
         result = substringLength;
       }
-      if (obj[s[b_position]] === undefined) {
-        obj[s[b_position]] = 1;
+      if (obj[s[bPosition]] === undefined) {
+        obj[s[bPosition]] = 1;
       } else {
-        obj[s[b_position]]++;
+        obj[s[bPosition]] += 1;
       }
-      b_position++;
+      bPosition += 1;
     }
-    a_position++;
-    b_position = a_position;
+    aPosition += 1;
+    bPosition = aPosition;
   }
   return result;
 };
+ */
 
-var lengthOfLongestSubstringRecursiveSolution = function(s) {
+/**
+const lengthOfLongestSubstringRecursiveSolution = (s) => {
   if (s.length === 0) return 0;
-  let arr = [];
-  let helper = (string) => {
-    arr.push(string)
-    if (string.length === 1) {
-      return;
-    } else {
-      const left = string.substring(1)
+  const arr = [];
+  const helper = (string) => {
+    arr.push(string);
+    if (string.length !== 1) {
+      const left = string.substring(1);
       if (!arr.includes(left)) {
         helper(left);
       }
@@ -67,11 +69,11 @@ var lengthOfLongestSubstringRecursiveSolution = function(s) {
         helper(right);
       }
     }
-  }
+  };
   helper(s);
   return arr.filter((string) => {
-    let obj = {};
-    for (let i = 0; i < string.length; i++) {
+    const obj = {};
+    for (let i = 0; i < string.length; i += 1) {
       if (obj[string[i]] === undefined) {
         obj[string[i]] = true;
       } else {
@@ -82,82 +84,65 @@ var lengthOfLongestSubstringRecursiveSolution = function(s) {
   }).reduce((accumulator, string) => {
     if (string.length > accumulator) {
       return string.length;
-    } else {
-      return accumulator;
     }
+    return accumulator;
   }, 0);
 };
+*/
 
 // TEST SUITE
-
 
 // TEST 1
 
 function test1() {
-
-  if (lengthOfLongestSubstring("") == 0) {
-    return "✔"
+  if (lengthOfLongestSubstring('') === 0) {
+    return '✔';
   }
-  else {
-    return "X"
-  }
+  return 'X';
 }
 
-console.log(test1())
+console.log(test1());
 
 // TEST 2
 
 function test2() {
-
-  if (lengthOfLongestSubstring(" ") == 1) {
-    return "✔"
+  if (lengthOfLongestSubstring(' ') === 1) {
+    return '✔';
   }
-  else {
-    return "X"
-  }
+  return 'X';
 }
 
-console.log(test2())
+console.log(test2());
 
 // TEST 3
 
 function test3() {
-
-  if (lengthOfLongestSubstring("abcb") == 3) {
-    return "✔"
+  if (lengthOfLongestSubstring('abcb') === 3) {
+    return '✔';
   }
-  else {
-    return "X"
-  }
+  return 'X';
 }
 
-console.log(test3())
+console.log(test3());
 
 // TEST 4
 
 function test4() {
-
-  if (lengthOfLongestSubstring("suqqjkuuxfeinpgjucmoc") == 12) {
-    return "✔"
+  if (lengthOfLongestSubstring('suqqjkuuxfeinpgjucmoc') === 12) {
+    return '✔';
   }
-  else {
-    return "X"
-  }
+  return 'X';
 }
 
-console.log(test4())
+console.log(test4());
 
 // TEST 5
 
-
 function test5() {
-
-  if (lengthOfLongestSubstring("mrjkdfwfsfjoblbhtjcpdbjdqkvevshhjssnzosstdgwqhelqibumkzcwujsnsbyktlkkgeflkectkpjuqfgdgjbduvqm") == 12) {
-    return "✔"
+  if (lengthOfLongestSubstring('mrjkdfwfsfjoblbhtjcpdbjdqkvevshhjssnzosstdgwqhelqibumkzcwujsnsbyktlkkgeflkectkpjuqfgdgjbduvqm') === 12) {
+    return '✔';
   }
-  else {
-    return "X"
-  }
+  return 'X';
 }
 
-console.log(test5())
+console.log(test5());

@@ -1,72 +1,120 @@
 /**
- * There are two sorted arrays nums1 and nums2 of size m and n respectively.
-
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
-
-You may assume nums1 and nums2 cannot be both empty.
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number}
  */
-
-var findMedianSortedArrays = function(nums1, nums2) {
+const findMedianSortedArrays = (nums1, nums2) => {
   if (nums1.length > nums2.length) {
     return findMedianSortedArrays(nums2, nums1);
   }
-  let x = nums1.length;
-  let y = nums2.length;
+  const x = nums1.length;
+  const y = nums2.length;
   let start = 0;
   let end = x;
-  let partition_x;
-  let partition_y
+  let partitionX;
+  let partitionY;
   while (start <= end) {
-    partition_x = Math.floor((start + end) / 2);
-    partition_y = Math.floor(((x + y + 1) / 2) - partition_x);
-    let max_x = (partition_x === 0) ? -Infinity : nums1[partition_x - 1];
-    let min_x = (partition_x === x) ? Infinity : nums1[partition_x];
-    let max_y = (partition_y === 0) ? -Infinity : nums2[partition_y - 1];
-    let min_y = (partition_y === y) ? Infinity : nums2[partition_y];
-    if (max_x < min_y && max_y < min_x) {
+    partitionX = Math.floor((start + end) / 2);
+    partitionY = Math.floor(((x + y + 1) / 2) - partitionX);
+    const maxX = (partitionX === 0) ? -Infinity : nums1[partitionX - 1];
+    const minX = (partitionX === x) ? Infinity : nums1[partitionX];
+    const maxY = (partitionY === 0) ? -Infinity : nums2[partitionY - 1];
+    const minY = (partitionY === y) ? Infinity : nums2[partitionY];
+    if (maxX < minY && maxY < minX) {
       if ((x + y) % 2 === 0) {
-        return (Math.max(max_x, max_y) + Math.min(min_x, min_y)) / 2;
-      } else {
-        return Math.max(max_x, max_y);
+        return (Math.max(maxX, maxY) + Math.min(minX, minY)) / 2;
       }
-    } else if (max_x > min_y) {
-      end = partition_x - 1;
-    } else if (max_x < min_y) {
-      start = partition_x + 1;
+      return Math.max(maxX, maxY);
+    }
+    if (maxX > minY) {
+      end = partitionX - 1;
+    } else if (maxX < minY) {
+      start = partitionX + 1;
+    } else if ((x + y) % 2 === 0) {
+      return (Math.max(maxX, maxY) + Math.min(minX, minY)) / 2;
     } else {
-      if ((x + y) % 2 === 0) {
-        return (Math.max(max_x, max_y) + Math.min(min_x, min_y)) / 2;
-      } else {
-        return Math.max(max_x, max_y);
-      }
+      return Math.max(maxX, maxY);
     }
   }
+  return null;
 };
-
 
 // TEST SUITE
 
-
 // TEST 1
 
-console.log(findMedianSortedArrays([1, 3], [2]));
+function test1() {
+  const actual = findMedianSortedArrays([1, 3], [2]);
+  const expected = 2;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test1());
 
 // TEST 2
 
-console.log(findMedianSortedArrays([1, 2], [3, 4]));
+function test2() {
+  const actual = findMedianSortedArrays([1, 2], [3, 4]);
+  const expected = 2.5;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test2());
 
 // TEST 3
 
-console.log(findMedianSortedArrays([1, 3, 8, 9, 15], [7, 11, 18, 19, 21, 25]));
+function test3() {
+  const actual = findMedianSortedArrays([1, 3, 8, 9, 15], [7, 11, 18, 19, 21, 25]);
+  const expected = 11;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test3());
 
 // TEST 4
 
-console.log(findMedianSortedArrays([23, 26, 31, 35], [3, 5, 7, 9, 11, 16]));
+function test4() {
+  const actual = findMedianSortedArrays([23, 26, 31, 35], [3, 5, 7, 9, 11, 16]);
+  const expected = 13.5;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test4());
 
 // TEST 5
 
-console.log(findMedianSortedArrays([0, 0], [0, 0]));
+function test5() {
+  const actual = findMedianSortedArrays([0, 0], [0, 0]);
+  const expected = 0;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test5());
 
 // TEST 6
 
-console.log(findMedianSortedArrays([1, 2], [1, 1]));
+function test6() {
+  const actual = findMedianSortedArrays([1, 2], [1, 1]);
+  const expected = 1;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test6());
