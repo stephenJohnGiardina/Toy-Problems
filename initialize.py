@@ -20,9 +20,9 @@ def initialize(directory):
     '\n\n',
     'function test1() {',
     '\n',
-    '  let actual;',
+    '  const actual;',
     '\n',
-    '  let expected;',
+    '  const expected;',
     '\n',
     '  if (actual === expected) {',
     '\n',
@@ -40,9 +40,9 @@ def initialize(directory):
     '\n\n',
     'function test2() {',
     '\n',
-    '  let actual;',
+    '  const actual;',
     '\n',
-    '  let expected;',
+    '  const expected;',
     '\n',
     '  if (actual === expected) {',
     '\n',
@@ -99,4 +99,4 @@ def initialize(directory):
   for i in range(len(pyContents)):
     py.write(pyContents[i])
 
-initialize(50)
+initialize()
