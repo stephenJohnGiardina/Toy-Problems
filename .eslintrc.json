@@ -26,6 +26,8 @@
             "enforceForRenamedProperties": false
           }],
           "no-console": "off",
-          "no-use-before-define": "off"
+          "no-use-before-define": "off",
+          "no-continue": "off",
+          "no-restricted-globals": "off"
         }
 }
