@@ -23,6 +23,7 @@ const search = (nums, target) => {
   if (midpoint === -1) return -1;
   if (max === min && nums[max] === target) return max;
   while (min !== max) {
+    if (min > max) return -1;
     if (nums[midpoint] === target) return midpoint;
     if (nums[midpoint] > target) {
       max = midpoint;
@@ -30,10 +31,11 @@ const search = (nums, target) => {
       min = midpoint;
     }
     if (midpoint === max - (Math.floor((max - min) / 2) || 1)) {
-      return -1;
+      min += 1;
     }
     midpoint = max - (Math.floor((max - min) / 2) || 1);
   }
+  if (nums[max] === target) return max;
   return -1;
 };
 
@@ -142,3 +144,16 @@ function test8() {
 }
 
 console.log(test8());
+
+// TEST 9
+
+function test9() {
+  const actual = search([1], 0);
+  const expected = -1;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test9());
