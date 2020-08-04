@@ -36,7 +36,7 @@ def myAtoi(string):
 def test1():
   actual = myAtoi('42')
   expected = 42
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -47,7 +47,7 @@ print(test1())
 def test2():
   actual = myAtoi('   -42')
   expected = -42
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -58,7 +58,7 @@ print(test2())
 def test3():
   actual = myAtoi('4193 with words')
   expected = 4193
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -69,7 +69,7 @@ print(test3())
 def test4():
   actual = myAtoi('words and 987')
   expected = 0
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -80,7 +80,7 @@ print(test4())
 def test5():
   actual = myAtoi('-91283472332')
   expected = -2147483648
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -91,7 +91,7 @@ print(test5())
 def test6():
   actual = myAtoi('')
   expected = 0
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -102,7 +102,7 @@ print(test6())
 def test7():
   actual = myAtoi('-')
   expected = 0
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -113,7 +113,7 @@ print(test7())
 def test8():
   actual = myAtoi('+1')
   expected = 1
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -124,7 +124,7 @@ print(test8())
 def test9():
   actual = myAtoi('+-2')
   expected = 0
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -135,7 +135,7 @@ print(test9())
 def test10():
   actual = myAtoi('   +0 123')
   expected = 0
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
@@ -146,7 +146,7 @@ print(test10())
 def test11():
   actual = myAtoi('0-1')
   expected = 0
-  if (actual == expected):
+  if actual == expected:
     return '✔'
   return 'X'
 
