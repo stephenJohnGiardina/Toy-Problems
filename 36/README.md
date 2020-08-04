@@ -8,7 +8,7 @@ Each column must contain the digits 1-9 without repetition.
 
 Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without repetition.
 
-<img src="../pictures/pic1.svg.png">
+<img src="../pictures/36.png">
 
 A partially filled sudoku which is valid.
 

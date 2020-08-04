@@ -4,15 +4,19 @@ Given an array nums of n integers and an integer target, find three integers in 
 
 
 
-Example 1:
+### Example 1:
 
 Input: nums = [-1,2,1,-4], target = 1
+
 Output: 2
+
 Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 
-Constraints:
+### Constraints:
 
-3 <= nums.length <= 10^3
--10^3 <= nums[i] <= 10^3
--10^4 <= target <= 10^4
+• 3 <= nums.length <= 10^3
+
+• -10^3 <= nums[i] <= 10^3
+
+• -10^4 <= target <= 10^4
