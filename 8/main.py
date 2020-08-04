@@ -33,44 +33,121 @@ def myAtoi(string):
 
 # TEST 1
 
-print(myAtoi('42'))
+def test1():
+  actual = myAtoi('42')
+  expected = 42
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test1())
 
 # TEST 2
 
-print(myAtoi('   -42'))
+def test2():
+  actual = myAtoi('   -42')
+  expected = -42
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test2())
 
 # TEST 3
 
-print(myAtoi('4193 with words'))
+def test3():
+  actual = myAtoi('4193 with words')
+  expected = 4193
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test3())
 
 # TEST 4
 
-print(myAtoi('words and 987'))
+def test4():
+  actual = myAtoi('words and 987')
+  expected = 0
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test4())
 
 # TEST 5
 
-print(myAtoi('-91283472332'))
+def test5():
+  actual = myAtoi('-91283472332')
+  expected = -2147483648
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test5())
 
 # TEST 6
 
-print(myAtoi(''))
+def test6():
+  actual = myAtoi('')
+  expected = 0
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test6())
 
 # TEST 7
 
-print(myAtoi('-'))
+def test7():
+  actual = myAtoi('-')
+  expected = 0
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test7())
 
 # TEST 8
 
-print(myAtoi('+1'))
+def test8():
+  actual = myAtoi('+1')
+  expected = 1
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test8())
 
 # TEST 9
 
-print(myAtoi('+-2'))
+def test9():
+  actual = myAtoi('+-2')
+  expected = 0
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test9())
 
 # TEST 10
 
-print(myAtoi('   +0 123'))
+def test10():
+  actual = myAtoi('   +0 123')
+  expected = 0
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test10())
 
 # TEST 11
 
-print(myAtoi('0-1'))
+def test11():
+  actual = myAtoi('0-1')
+  expected = 0
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test11())

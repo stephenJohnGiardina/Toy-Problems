@@ -1,85 +1,187 @@
-var myAtoi = function(str) {
+/**
+ * @param {string} str
+ * @return {number}
+ */
+const myAtoi = (str) => {
   let currentChar;
   let result = '';
   let haveHadNumber = false;
   let gotSign = false;
-  for (let i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i += 1) {
     currentChar = str[i];
     if (currentChar === ' ' && !haveHadNumber && !gotSign) {
       continue;
     } else if ((currentChar === '-' || currentChar === '+') && !haveHadNumber) {
       if (!gotSign) {
-        result+= currentChar;
+        result += currentChar;
         gotSign = true;
       } else {
         break;
       }
-    } else if (!isNaN(Number.parseInt(currentChar))) {
-      haveHadNumber = true
-      result+= currentChar
-    } else if (isNaN(Number.parseInt(currentChar))) {
+    } else if (!isNaN(Number.parseInt(currentChar, 10))) {
+      haveHadNumber = true;
+      result += currentChar;
+    } else if (isNaN(Number.parseInt(currentChar, 10))) {
       if (!haveHadNumber) {
         return 0;
-      } else {
-        break;
       }
+      break;
     }
   }
   if (!haveHadNumber) {
     return 0;
   }
-  result = Number.parseInt(result);
-  if (result > Math.pow(2, 31) - 1) {
-    return Math.pow(2, 31) - 1;
-  } else if (result < - Math.pow(2, 31)) {
-    return - Math.pow(2, 31);
+  result = Number.parseInt(result, 10);
+  if (result > (2 ** 31) - 1) {
+    return (2 ** 31) - 1;
+  }
+  if (result < -(2 ** 31)) {
+    return -(2 ** 31);
   }
   return result;
-}
-
+};
 
 // TEST SUITE
 
 // TEST 1
 
-console.log(myAtoi('42'));
+function test1() {
+  const actual = myAtoi('42');
+  const expected = 42;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test1());
 
 // TEST 2
 
-console.log(myAtoi('   -42'));
+function test2() {
+  const actual = myAtoi('   -42');
+  const expected = -42;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test2());
 
 // TEST 3
 
-console.log(myAtoi('4193 with words'));
+function test3() {
+  const actual = myAtoi('4193 with words');
+  const expected = 4193;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test3());
 
 // TEST 4
 
-console.log(myAtoi('words and 987'));
+function test4() {
+  const actual = myAtoi('words and 987');
+  const expected = 0;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test4());
 
 // TEST 5
 
-console.log(myAtoi('-91283472332'));
+function test5() {
+  const actual = myAtoi('-91283472332');
+  const expected = -2147483648;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test5());
 
 // TEST 6
 
-console.log(myAtoi(''));
+function test6() {
+  const actual = myAtoi('');
+  const expected = 0;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test6());
 
 // TEST 7
 
-console.log(myAtoi('-'));
+function test7() {
+  const actual = myAtoi('-');
+  const expected = 0;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test7());
 
 // TEST 8
 
-console.log(myAtoi('+1'));
+function test8() {
+  const actual = myAtoi('+1');
+  const expected = 1;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test8());
 
 // TEST 9
 
-console.log(myAtoi('+-2'));
+function test9() {
+  const actual = myAtoi('+-2');
+  const expected = 0;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test9());
 
 // TEST 10
 
-console.log(myAtoi('   +0 123'));
+function test10() {
+  const actual = myAtoi('   +0 123');
+  const expected = 0;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test10());
 
 // TEST 11
 
-console.log(myAtoi('0-1'));
+function test11() {
+  const actual = myAtoi('0-1');
+  const expected = 0;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test11());
