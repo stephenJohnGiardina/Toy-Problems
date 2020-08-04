@@ -23,20 +23,56 @@ def reverse(x):
 
   # TEST 1
 
-print(reverse(123))
+def test1():
+  actual = reverse(123)
+  expected = 321
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test1())
 
   # TEST 2
 
-print(reverse(-123))
+def test2():
+  actual = reverse(-123)
+  expected = -321
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test2())
 
   # TEST 3
 
-print(reverse(432))
+def test3():
+  actual = reverse(432)
+  expected = 234
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test3())
 
   # TEST 4
 
-print(reverse(987))
+def test4():
+  actual = reverse(987)
+  expected = 789
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test4())
+
 
   # TEST 5
 
-print(reverse(1534236469))
+def test5():
+  actual = reverse(1534236469)
+  expected = 0
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test5())
