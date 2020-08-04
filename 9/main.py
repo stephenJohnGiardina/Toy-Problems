@@ -15,18 +15,37 @@ def isPalendrome(x):
       x = x[1:len(x) - 1]
   return True
 
-
 # TEST SUITE
 
 # TEST 1
 
-print(isPalendrome(121))
+def test1():
+  actual = isPalendrome(121)
+  expected = True
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test1())
 
 # TEST 2
 
-print(isPalendrome(-121))
+def test2():
+  actual = isPalendrome(-121)
+  expected = False
+  if actual == expected:
+    return '✔'
+  return 'X'
 
-# TEST 1
+print(test2())
 
-print(isPalendrome(10))
+# TEST 3
 
+def test3():
+  actual = isPalendrome(10)
+  expected = False
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test3())

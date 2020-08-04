@@ -1,31 +1,61 @@
-var isPalendrome = function(x) {
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+const isPalendrome = (x) => {
   if (x < 0) return false;
-  x+='';
-  if (x.length < 2) return true;
-  if (x.length % 2 !== 0) {
-    x = x.slice(0, Math.floor(x.length / 2)) + x.slice(Math.floor(x.length / 2) + 1);
+  let string = x.toString();
+  if (string.length < 2) return true;
+  if (string.length % 2 !== 0) {
+    string = string
+      .slice(0, Math.floor(string.length / 2)) + string.slice(Math.floor(string.length / 2) + 1);
   }
-  while (x.length !== 0) {
-    if (x[0] !== x[x.length - 1]) {
+  while (string.length !== 0) {
+    if (string[0] !== string[string.length - 1]) {
       return false;
-    } else {
-      x = x.substring(1, x.length - 1);
     }
+    string = string.substring(1, string.length - 1);
   }
   return true;
-}
-
+};
 
 // TEST SUITE
 
 // TEST 1
 
-console.log(isPalendrome(121));
+function test1() {
+  const actual = isPalendrome(121);
+  const expected = true;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test1());
 
 // TEST 2
 
-console.log(isPalendrome(-121));
+function test2() {
+  const actual = isPalendrome(-121);
+  const expected = false;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
 
-// TEST 1
+console.log(test2());
 
-console.log(isPalendrome(10));
+// TEST 3
+
+function test3() {
+  const actual = isPalendrome(10);
+  const expected = false;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test3());
