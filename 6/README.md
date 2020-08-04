@@ -2,11 +2,11 @@
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 
-P   A   H   N
+P___A___H___N
 
-A P L S I I G
+A_P_L_S_I_I_G
 
-Y   I   R
+Y___I___R___
 
 And then read line by line: "PAHNAPLSIIGYIR"
 
@@ -28,10 +28,10 @@ Output: "PINALSIGYAHRPI"
 
 Explanation:
 
-P     I     N
+P_____I_____N
 
-A   L S   I G
+A___L_S___I_G
 
-Y A   H R
+Y_A___H_R____
 
-P     I
+P_____I______
