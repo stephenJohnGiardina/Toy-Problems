@@ -1,12 +1,12 @@
 DIGIT_VALUES = {
   0: 0,
-  "I": 1,
-  "V": 5,
-  "X": 10,
-  "L": 50,
-  "C": 100,
-  "D": 500,
-  "M": 1000
+  'I': 1,
+  'V': 5,
+  'X': 10,
+  'L': 50,
+  'C': 100,
+  'D': 500,
+  'M': 1000
 }
 
 
@@ -25,20 +25,55 @@ def romanToInt(s):
 
 # TEST 1
 
-print(romanToInt("III"))
+def test1():
+  actual = romanToInt('III')
+  expected = 3
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test1())
 
 # TEST 2
 
-print(romanToInt("IV"))
+def test2():
+  actual = romanToInt('IV')
+  expected = 4
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test2())
 
 # TEST 3
 
-print(romanToInt("IX"))
+def test3():
+  actual = romanToInt('IX')
+  expected = 9
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test3())
 
 # TEST 4
 
-print(romanToInt("LVIII"))
+def test4():
+  actual = romanToInt('LVIII')
+  expected = 58
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test4())
 
 # TEST 5
 
-print(romanToInt("MCMXCIV"))
+def test5():
+  actual = romanToInt('MCMXCIV')
+  expected = 1994
+  if (actual == expected):
+    return '✔'
+  return 'X'
+
+print(test5())

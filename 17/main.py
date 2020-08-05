@@ -1,14 +1,3 @@
-phoneNumberLetters = {
-  '2': "abc",
-  '3': "def",
-  '4': "ghi",
-  '5': "jkl",
-  '6': "mno",
-  '7': "pqrs",
-  '8': "tuv",
-  '9': "wxyz"
-}
-
 def letterCombinations(digits, string = ''):
   result = []
   if (len(digits) == 0):
@@ -21,14 +10,42 @@ def letterCombinations(digits, string = ''):
         result.append(array[i])
   return result
 
+phoneNumberLetters = {
+  '2': 'abc',
+  '3': 'def',
+  '4': 'ghi',
+  '5': 'jkl',
+  '6': 'mno',
+  '7': 'pqrs',
+  '8': 'tuv',
+  '9': 'wxyz',
+}
 
 # TEST SUITE
 
 # TEST 1
 
-print(letterCombinations("23"))
+def test1():
+  actual = letterCombinations('23')
+  expected = [
+    'ad', 'ae', 'af',
+    'bd', 'be', 'bf',
+    'cd', 'ce', 'cf',
+  ]
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test1())
 
 # TEST 2
 
-print(letterCombinations(""))
+def test2():
+  actual = letterCombinations('')
+  expected = []
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test2())
 

@@ -11,14 +11,26 @@ def maxArea(height):
       b -= 1
   return result
 
-
-
 # TEST SUITE
 
 # TEST 1
 
-print(maxArea([3,2,12,4]))
+def test1():
+  actual = maxArea([3, 2, 12, 4])
+  expected = 9
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test1())
 
 # TEST 2
 
-print(maxArea([1,8,6,2,5,4,8,3,7]))
+def test2():
+  actual = maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])
+  expected = 49
+  if actual == expected:
+    return '✔'
+  return 'X'
+
+print(test2())
