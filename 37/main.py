@@ -1,14 +1,18 @@
 def solveSudoku(board):
-  for y in range(9):
-    for x in range(9):
-      if board[y][x] == '.':
-        for n in range(1, 10):
-          if possible(board, y, x, str(n)):
-            board[y][x] = str(n)
-            solveSudoku(board)
-            board[y][x] = '.'
-      return
-  return board
+  def solve():
+    for y in range(9):
+      for x in range(9):
+        if board[y][x] == '.':
+          for n in range(1, 10):
+            if possible(board, y, x, str(n)):
+              board[y][x] = str(n)
+              solve()
+              board[y][x] = '.'
+          return
+    print(board)
+  print(solve())
+
+
 
 def possible (board, y, x, n):
   for i in range(9):
@@ -28,23 +32,18 @@ def possible (board, y, x, n):
 
 # TEST SUITE
 
-def isValidSudoku(board):
+def isSolved(board):
   for i in range(len(board)):
+    column = {}
+    row = {}
     for j in range(len(board[0])):
-      current = board[i][j]
-      if current != '.':
-        for k in range(j):
-          if current == board[i][k]:
-            return False
-        for k in range(j + 1, len(board)):
-          if current == board[i][k]:
-            return False
-        for k in range(i):
-          if current == board[k][j]:
-            return False
-        for k in range(i + 1, len(board)):
-          if current == board[k][j]:
-            return False
+      if board[i][j] not in column:
+        column[board[i][j]] = True
+      else:
+        return False
+      if board[j][i] not in row:
+        row[board[j][i]] = True
+      else:
         return False
   boxes = [
     [
@@ -171,7 +170,7 @@ def test1():
     ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
   ]
   solveSudoku(board)
-  if isValidSudoku(board):
+  if isSolved(board):
     return '✔'
   return 'X'
 
@@ -192,7 +191,7 @@ def test2():
     ['.', '.', '.', '2', '7', '5', '9', '.', '.'],
   ]
   solveSudoku(board)
-  if isValidSudoku(board):
+  if isSolved(board):
     return '✔'
   return 'X'
 
