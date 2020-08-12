@@ -3,18 +3,28 @@
  * @return {void} Do not return anything, modify board in-place instead.
  */
 const solveSudoku = (board) => {
-  for (let y = 0; y < 9; y += 1) {
-    for (let x = 0; x < 9; x += 1) {
-      if (board[y][x] === '.') {
-        for (let n = 1; n < 10; n += 1) {
-          if (possible(board, y, x, n.toString())) {
-            board[y][x] = n.toString();
-            solveSudoku(board);
-            board[y][x] = '.';
+  let solved;
+  const solve = () => {
+    for (let y = 0; y < 9; y += 1) {
+      for (let x = 0; x < 9; x += 1) {
+        if (board[y][x] === '.') {
+          for (let n = 1; n < 10; n += 1) {
+            if (possible(board, y, x, n.toString())) {
+              board[y][x] = n.toString();
+              solve(board);
+              board[y][x] = '.';
+            }
           }
+          return;
         }
       }
-      return;
+    }
+    solved = JSON.parse(JSON.stringify(board));
+  };
+  solve();
+  for (let i = 0; i < 9; i += 1) {
+    for (let j = 0; j < 9; j += 1) {
+      board[i][j] = solved[i][j];
     }
   }
 };
@@ -44,26 +54,22 @@ const possible = (board, y, x, n) => {
 
 // TEST SUITE
 
-const isValidSudoku = (board) => {
-  // Checks for any repeats in all columns and rows
+const isSolved = (board) => {
+  // Checks for any repeats in all columns
   for (let i = 0; i < board.length; i += 1) {
+    const column = {};
+    const row = {};
     for (let j = 0; j < board[0].length; j += 1) {
-      const current = board[i][j];
-      if (current !== '.') {
-        for (let k = 0; k < j; k += 1) {
-          if (current === board[i][k]) return false;
-        }
-        for (let k = j + 1; k < board.length; k += 1) {
-          if (current === board[i][k]) return false;
-        }
-        for (let k = 0; k < i; k += 1) {
-          if (current === board[k][j]) return false;
-        }
-        for (let k = i + 1; k < board.length; k += 1) {
-          if (current === board[k][j]) return false;
-        }
+      if (!column[board[i][j]]) {
+        column[board[i][j]] = true;
+      } else {
+        return false;
       }
-      return false;
+      if (!row[board[j][i]]) {
+        row[board[j][i]] = true;
+      } else {
+        return false;
+      }
     }
   }
   // Checks for any repeats in all boxes
@@ -197,7 +203,7 @@ function test1() {
     ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
   ];
   solveSudoku(board);
-  if (isValidSudoku(board)) {
+  if (isSolved(board)) {
     return '✔';
   }
   return 'X';
@@ -220,33 +226,10 @@ function test2() {
     ['.', '.', '.', '2', '7', '5', '9', '.', '.'],
   ];
   solveSudoku(board);
-  if (isValidSudoku(board)) {
+  if (isSolved(board)) {
     return '✔';
   }
   return 'X';
 }
 
 console.log(test2());
-
-// TEST 3
-
-function test3() {
-  const board = [
-    ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
-    ['6', '.', '.', '1', '9', '5', '.', '.', '.'],
-    ['.', '9', '8', '.', '.', '.', '.', '6', '.'],
-    ['8', '.', '.', '.', '6', '.', '.', '.', '3'],
-    ['4', '.', '.', '8', '.', '3', '.', '.', '1'],
-    ['7', '.', '.', '.', '2', '.', '.', '.', '6'],
-    ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
-    ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
-    ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
-  ];
-  solveSudoku(board);
-  if (isValidSudoku(board)) {
-    return '✔';
-  }
-  return 'X';
-}
-
-console.log(test3());
