@@ -2,52 +2,94 @@
  * @param {string} s
  * @return {boolean}
  */
-var isValid = function(s) {
-  let parenCount = 0
-  let curlyCount = 0
-  let bracketCount = 0
-  for (let i = 0; i < s.length; i++) {
+const isValid = (s) => {
+  let parenCount = 0;
+  let curlyCount = 0;
+  let bracketCount = 0;
+  for (let i = 0; i < s.length; i += 1) {
     if (s[i] === '(') {
-      parenCount++;
-    } else if (s[i] === '['){
-      bracketCount++
-    } else if (s[i] === '{'){
-      curlyCount++;
-    } else if (s[i] === ')'){
-      parenCount--;
-    } else if (s[i] === ']'){
-      bracketCount--;
-    } else if (s[i] === '}'){
-      curlyCount--;
+      parenCount += 1;
+    } else if (s[i] === '[') {
+      bracketCount += 1;
+    } else if (s[i] === '{') {
+      curlyCount += 1;
+    } else if (s[i] === ')') {
+      parenCount -= 1;
+    } else if (s[i] === ']') {
+      bracketCount -= 1;
+    } else if (s[i] === '}') {
+      curlyCount -= 1;
     }
-    if (parenCount < 0 || bracketCount < 0 || curlyCount < 0){
+    if (parenCount < 0 || bracketCount < 0 || curlyCount < 0) {
       return false;
     }
   }
   return true;
 };
 
-
 // TEST SUITE
 
 // TEST 1
 
-console.log(isValid("()"))
+function test1() {
+  const actual = isValid('()');
+  const expected = true;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test1());
 
 // TEST 2
 
-console.log(isValid("()[]{}"))
+function test2() {
+  const actual = isValid('()[]{}');
+  const expected = true;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test2());
 
 // TEST 3
 
-console.log(isValid("(]"))
+function test3() {
+  const actual = isValid('(]');
+  const expected = false;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test3());
 
 // TEST 4
 
-console.log(isValid("([)]"))
+function test4() {
+  const actual = isValid('([)]');
+  const expected = false;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test4());
 
 // TEST 5
 
-console.log(isValid("{[]}"))
+function test5() {
+  const actual = isValid('{[]}');
+  const expected = true;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
 
-
+console.log(test5());

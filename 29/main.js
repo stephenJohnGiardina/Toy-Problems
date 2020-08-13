@@ -3,7 +3,7 @@
  * @param {number} divisor
  * @return {number}
  */
-var divide = function(dividend, divisor) {
+const divide = (dividend, divisor) => {
   // In the case that divisor === -0
   if (divisor === 0) divisor = 0;
   // A result variable is declared.
@@ -15,25 +15,23 @@ var divide = function(dividend, divisor) {
   let negative = false;
   if (dividend < 0) {
     negative = !negative;
-    dividend = Number.parseInt((dividend + '').substring(1))
+    dividend = Number.parseInt((dividend.toString()).substring(1), 10);
   }
   if (divisor < 0) {
     negative = !negative;
-    divisor = Number.parseInt((divisor + '').substring(1))
+    divisor = Number.parseInt((divisor.toString()).substring(1), 10);
   }
   // Finds the result using a long division function.
   if (divisor === 0) {
     if (negative) {
       return -Infinity;
-    } else {
-      return Infinity;
     }
-  } else {
-    result = longDivision(dividend, divisor);
+    return Infinity;
   }
+  result = longDivision(dividend, divisor);
   // Makes the number negative if is supposed to be.
   if (negative) {
-    result = Number.parseInt('-' + result)
+    result = Number.parseInt(`-${result}`, 10);
   }
   // Makes sure the result is within a specific range.
   if (result > 2147483647) {
@@ -61,24 +59,24 @@ function longDivision(dividend, divisor) {
    * and the next minuend in the operation.
    */
   if (dividend < divisor) return 0;
-  let dividendString = (dividend + '');
+  let dividendString = (dividend.toString());
   let result = '';
   let currentDividend = dividendString[0];
   dividendString = dividendString.slice(1);
-  while (divisor > Number.parseInt(currentDividend)) {
+  while (divisor > Number.parseInt(currentDividend, 10)) {
     currentDividend += dividendString[0];
     dividendString = dividendString.slice(1);
   }
   while (dividendString.length !== 0) {
-    let [product, minuend] = findProduct(divisor, Number.parseInt(currentDividend));
+    const [product, minuend] = findProduct(divisor, Number.parseInt(currentDividend, 10));
     result += minuend;
-    let difference = Number.parseInt(currentDividend) - product;
+    const difference = Number.parseInt(currentDividend, 10) - product;
     currentDividend = difference + dividendString[0];
     dividendString = dividendString.slice(1);
   }
-  let [product, minuend] = findProduct(divisor, Number.parseInt(currentDividend));
+  const minuend = findProduct(divisor, Number.parseInt(currentDividend, 10))[1];
   result += minuend;
-  return Number.parseInt(result);
+  return Number.parseInt(result, 10);
 }
 
 function findProduct(divisor, dividend) {
@@ -107,23 +105,23 @@ function findProduct(divisor, dividend) {
   let minuend = 0;
   let product = 0;
   while (product <= dividend) {
-    minuend++;
+    minuend += 1;
     product += divisor;
   }
   return [product - divisor, minuend - 1];
 }
-
 
 // TEST SUITE
 
 // TEST 1
 
 function test1() {
-  if (divide(10, 3) === 3) {
-    return "✔";
-  } else {
-    return "X";
+  const actual = divide(10, 3);
+  const expected = 3;
+  if (actual === expected) {
+    return '✔';
   }
+  return 'X';
 }
 
 console.log(test1());
@@ -131,11 +129,12 @@ console.log(test1());
 // TEST 2
 
 function test2() {
-  if (divide(7, -3) === -2) {
-    return "✔";
-  } else {
-    return "X";
+  const actual = divide(7, -3);
+  const expected = -2;
+  if (actual === expected) {
+    return '✔';
   }
+  return 'X';
 }
 
 console.log(test2());
@@ -143,11 +142,12 @@ console.log(test2());
 // TEST 3
 
 function test3() {
-  if (divide(-7, 3) === -2) {
-    return "✔";
-  } else {
-    return "X";
+  const actual = divide(-7, 3);
+  const expected = -2;
+  if (actual === expected) {
+    return '✔';
   }
+  return 'X';
 }
 
 console.log(test3());
@@ -155,11 +155,12 @@ console.log(test3());
 // TEST 4
 
 function test4() {
-  if (divide(-7, -3) === 2) {
-    return "✔";
-  } else {
-    return "X";
+  const actual = divide(-7, -3);
+  const expected = 2;
+  if (actual === expected) {
+    return '✔';
   }
+  return 'X';
 }
 
 console.log(test4());
@@ -167,11 +168,12 @@ console.log(test4());
 // TEST 5
 
 function test5() {
-  if (divide(1, 1) === 1) {
-    return "✔";
-  } else {
-    return "X";
+  const actual = divide(1, 1);
+  const expected = 1;
+  if (actual === expected) {
+    return '✔';
   }
+  return 'X';
 }
 
 console.log(test5());
@@ -179,11 +181,12 @@ console.log(test5());
 // TEST 6
 
 function test6() {
-  if (divide(-2147483648, -1) === 2147483647) {
-    return "✔";
-  } else {
-    return "X";
+  const actual = divide(-2147483648, -1);
+  const expected = 2147483647;
+  if (actual === expected) {
+    return '✔';
   }
+  return 'X';
 }
 
 console.log(test6());
@@ -192,19 +195,18 @@ console.log(test6());
 
 function test7() {
   let result = 0;
-  for (let i = 0; i < 100000; i++) {
-    let dividend = Math.trunc((Math.random() - .5) * 10000);
-    let divisor = Math.trunc((Math.random() - .5) * 10000);
+  for (let i = 0; i < 100000; i += 1) {
+    const dividend = Math.trunc((Math.random() - 0.5) * 10000);
+    const divisor = Math.trunc((Math.random() - 0.5) * 10000);
     // Had to convert both dividend and divisor to strings to get rid of -0
-    if (divide(dividend, divisor) === Math.trunc((dividend + '') / (divisor + ''))) {
-      result++;
-    }
-    else {
-      console.log(dividend, divisor, divide(dividend, divisor), Math.trunc(dividend / divisor))
+    if (divide(dividend, divisor) === Math.trunc((dividend.toString()) / (divisor.toString()))) {
+      result += 1;
+    } else {
+      console.log(dividend, divisor, divide(dividend, divisor), Math.trunc(dividend / divisor));
     }
   }
-  let data = `Passed ${result}/100000 randomly generated tests.`
- return data;
+  const data = `Passed ${result}/100000 randomly generated tests.`;
+  return data;
 }
 
 console.log(test7());
