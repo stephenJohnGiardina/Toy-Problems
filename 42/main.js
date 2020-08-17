@@ -3,10 +3,9 @@
  * @return {number}
  */
 const trap = (height) => {
-  // This is a brute force method that exceeds time limits
   const heights = {};
   for (let i = 0; i < height.length - 1; i += 1) {
-    for (let j = i + 2; j < height.length; j += 1) {
+    for (let j = i + 1; j < height.length; j += 1) {
       for (let k = i + 1; k < j; k += 1) {
         if (height[k] < height[i] && height[k] < height[j]) {
           const min = Math.min(height[i], height[j]);
@@ -16,6 +15,9 @@ const trap = (height) => {
             heights[k] = min - height[k];
           }
         }
+      }
+      if (height[i] <= height[j]) {
+        i = j;
       }
     }
   }
@@ -54,3 +56,16 @@ function test2() {
 }
 
 console.log(test2());
+
+// TEST 3
+
+function test3() {
+  const actual = trap([0, 5, 6, 4, 6, 1, 0, 0, 2, 7]);
+  const expected = 23;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test3());
