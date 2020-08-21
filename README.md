@@ -9,6 +9,7 @@ initialize.py is a python file used to create a directory with the files needed 
 
 # All problems:
 
+
 #### 1. Two Sum
 
 #### 2. Add Two Numbers
@@ -65,6 +66,18 @@ initialize.py is a python file used to create a directory with the files needed 
 
 #### 29. Divide Two Integers
 
+#### 33. Search in Rotated Sorted Array
+
+#### 36. Valid Sudoku
+
+#### 37. Sudoku Solver
+
+#### 38. Count and Say
+
+#### 39. Combination Sum
+
+#### 42. Trapping Rain Water
+
 #### 167. Two Sum II - Input array is sorted
 
 #### 653. Two Sum IV - Input is a BST
@@ -78,4 +91,12 @@ initialize.py is a python file used to create a directory with the files needed 
 #### 1281. Subtract the Product and Sum of Digits of an Integer
 
 #### 1295. Find Numbers with Even Number of Digits
+
+#### 5475. Count Good Triplets
+
+#### 5476. Find the Winner of an Array Game
+
+#### 5477. Minimum Swaps to Arrange a Binary Grid
+
+#### 5478. Get the Maximum Score
 

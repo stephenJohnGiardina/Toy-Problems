@@ -7,7 +7,7 @@ files = sorted(os.listdir(dire))
 directoriesToEdit = []
 
 for i in range(len(files)):
-  if '.' not in files[i]:
+  if '.' not in files[i] and 'node' not in files[i] and 'pictures' not in files[i]:
     # files[i] is changed to an int so that the array gets sorted properly.
     directoriesToEdit.append(int(files[i]))
 
@@ -36,7 +36,7 @@ def updateProblemList():
     readMe.write("\n")
   return problems
 
-updateProblemList()
+# updateProblemList()
 
 # This function loops over every directory in the working directory and checks if it has a specific type of file in it. If it does not then it will add that file to that directory.
 
