@@ -1,4 +1,4 @@
-# 5476. Find the Winner of an Array Game
+# 1535. Find the Winner of an Array Game
 
 Given an integer array arr of distinct integers and an integer k.
 
@@ -10,35 +10,69 @@ It is guaranteed that there will be a winner of the game.
 
 
 
-Example 1:
+### Example 1:
 
-Input: arr = [2,1,3,5,4,6,7], k = 2
-Output: 5
-Explanation: Let's see the rounds of the game:
+Input:
+
+arr = [2,1,3,5,4,6,7], k = 2
+
+Output:
+
+5
+
+Explanation:
+
+Let's see the rounds of the game:
+
 Round |       arr       | winner | win_count
   1   | [2,1,3,5,4,6,7] | 2      | 1
   2   | [2,3,5,4,6,7,1] | 3      | 1
   3   | [3,5,4,6,7,1,2] | 5      | 1
   4   | [5,4,6,7,1,2,3] | 5      | 2
+
 So we can see that 4 rounds will be played and 5 is the winner because it wins 2 consecutive games.
-Example 2:
 
-Input: arr = [3,2,1], k = 10
-Output: 3
-Explanation: 3 will win the first 10 rounds consecutively.
-Example 3:
+### Example 2:
 
-Input: arr = [1,9,8,2,3,7,6,4,5], k = 7
-Output: 9
-Example 4:
+Input:
 
-Input: arr = [1,11,22,33,44,55,66,77,88,99], k = 1000000000
-Output: 99
+arr = [3,2,1], k = 10
+
+Output:
+
+3
+
+Explanation:
+
+3 will win the first 10 rounds consecutively.
+
+### Example 3:
+
+Input:
+
+arr = [1,9,8,2,3,7,6,4,5], k = 7
+
+Output:
+
+9
+
+### Example 4:
+
+Input:
+
+arr = [1,11,22,33,44,55,66,77,88,99], k = 1000000000
+
+Output:
+
+99
 
 
-Constraints:
+### Constraints:
 
-2 <= arr.length <= 10^5
-1 <= arr[i] <= 10^6
-arr contains distinct integers.
-1 <= k <= 10^9
+• 2 <= arr.length <= 10^5
+
+• 1 <= arr[i] <= 10^6
+
+• arr contains distinct integers.
+
+• 1 <= k <= 10^9

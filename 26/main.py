@@ -16,9 +16,9 @@ class Solution:
 
 def test1():
   if Solution.removeDuplicates(None, [1,1,2]) == 2:
-    return "✔"
+    return '✔'
   else:
-    return "X"
+    return 'X'
 
 print(test1())
 
@@ -26,8 +26,8 @@ print(test1())
 
 def test2():
   if Solution.removeDuplicates(None, [0,0,1,1,1,2,2,3,3,4]) == 5:
-    return "✔"
+    return '✔'
   else:
-    return "X"
+    return 'X'
 
 print(test2())

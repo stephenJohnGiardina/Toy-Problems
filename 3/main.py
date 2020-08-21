@@ -22,9 +22,9 @@ class Solution:
 
 def test1():
     if Solution.lengthOfLongestSubstring(None, "") == 0:
-        return "✔"
+        return '✔'
     else:
-        return "X"
+        return 'X'
 
 print(test1())
 
@@ -32,9 +32,9 @@ print(test1())
 
 def test2():
     if Solution.lengthOfLongestSubstring(None, " ") == 1:
-        return "✔"
+        return '✔'
     else:
-        return "X"
+        return 'X'
 
 print(test2())
 
@@ -42,9 +42,9 @@ print(test2())
 
 def test3():
     if Solution.lengthOfLongestSubstring(None, "abcb") == 3:
-        return "✔"
+        return '✔'
     else:
-        return "X"
+        return 'X'
 
 print(test3())
 
@@ -52,9 +52,9 @@ print(test3())
 
 def test4():
     if Solution.lengthOfLongestSubstring(None, "suqqjkuuxfeinpgjucmoc") == 12:
-        return "✔"
+        return '✔'
     else:
-        return "X"
+        return 'X'
 
 print(test4())
 
@@ -63,8 +63,8 @@ print(test4())
 
 def test5():
     if Solution.lengthOfLongestSubstring(None, "mrjkdfwfsfjoblbhtjcpdbjdqkvevshhjssnzosstdgwqhelqibumkzcwujsnsbyktlkkgeflkectkpjuqfgdgjbduvqm") == 12:
-        return "✔"
+        return '✔'
     else:
-        return "X"
+        return 'X'
 
 print(test5())

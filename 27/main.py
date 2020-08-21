@@ -14,9 +14,9 @@ class Solution:
 
 def test1():
   if Solution.removeElement(None, [3,2,2,3], 3) == 2:
-    return "✔"
+    return '✔'
   else:
-    return "X"
+    return 'X'
 
 print(test1())
 
@@ -24,8 +24,8 @@ print(test1())
 
 def test2():
   if Solution.removeElement(None, [0,1,2,2,3,0,4,2], 2) == 5:
-    return "✔"
+    return '✔'
   else:
-    return "X"
+    return 'X'
 
 print(test2())

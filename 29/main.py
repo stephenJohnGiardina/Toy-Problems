@@ -51,9 +51,9 @@ def findProduct(divisor, dividend):
 
 def test1():
   if divide(10, 3) == 3:
-    return "✔"
+    return '✔'
   else:
-    return "X"
+    return 'X'
 
 print(test1())
 
@@ -61,9 +61,9 @@ print(test1())
 
 def test2():
   if divide(7, -3) == -2:
-    return "✔"
+    return '✔'
   else:
-    return "X"
+    return 'X'
 
 print(test2())
 
@@ -71,9 +71,9 @@ print(test2())
 
 def test3():
   if divide(214, 2) == 214 / 2:
-    return "✔"
+    return '✔'
   else:
-    return "X"
+    return 'X'
 
 print(test3())
 
