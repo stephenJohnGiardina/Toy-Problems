@@ -3,28 +3,65 @@
  * @return {boolean}
  */
 const isValid = (s) => {
-  let parenCount = 0;
-  let curlyCount = 0;
-  let bracketCount = 0;
-  for (let i = 0; i < s.length; i += 1) {
-    if (s[i] === '(') {
-      parenCount += 1;
-    } else if (s[i] === '[') {
-      bracketCount += 1;
-    } else if (s[i] === '{') {
-      curlyCount += 1;
-    } else if (s[i] === ')') {
-      parenCount -= 1;
-    } else if (s[i] === ']') {
-      bracketCount -= 1;
-    } else if (s[i] === '}') {
-      curlyCount -= 1;
-    }
-    if (parenCount < 0 || bracketCount < 0 || curlyCount < 0) {
-      return false;
-    }
+  if (s[0] === '(') {
+    return solveParens(s.substring(1));
+  } if (s[0] === '{') {
+    return solveCurly(s.substring(1));
+  } if (s[0] === '[') {
+    return solveBracket(s.substring(1));
   }
-  return true;
+  return false;
+};
+
+const solveParens = (string) => {
+  if (string[0] === '}') {
+    return false;
+  } if (string[0] === ']') {
+    return false;
+  } if (string[0] === ')') {
+    return true;
+  } if (string[0] === '(') {
+    return solveParens(string.substring(1));
+  } if (string[0] === '{') {
+    return solveCurly(string.substring(1));
+  } if (string[0] === '[') {
+    return solveBracket(string.substring(1));
+  }
+  return false;
+};
+
+const solveCurly = (string) => {
+  if (string[0] === '}') {
+    return true;
+  } if (string[0] === ']') {
+    return false;
+  } if (string[0] === ')') {
+    return false;
+  } if (string[0] === '(') {
+    return solveParens(string.substring(1));
+  } if (string[0] === '{') {
+    return solveCurly(string.substring(1));
+  } if (string[0] === '[') {
+    return solveBracket(string.substring(1));
+  }
+  return false;
+};
+
+const solveBracket = (string) => {
+  if (string[0] === '}') {
+    return false;
+  } if (string[0] === ']') {
+    return true;
+  } if (string[0] === ')') {
+    return false;
+  } if (string[0] === '(') {
+    return solveParens(string.substring(1));
+  } if (string[0] === '{') {
+    return solveCurly(string.substring(1));
+  } if (string[0] === '[') {
+    return solveBracket(string.substring(1));
+  }
+  return false;
 };
 
 // TEST SUITE
@@ -93,3 +130,29 @@ function test5() {
 }
 
 console.log(test5());
+
+// TEST 6
+
+function test6() {
+  const actual = isValid('[');
+  const expected = false;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test6());
+
+// TEST 7
+
+function test7() {
+  const actual = isValid('(){}}{');
+  const expected = false;
+  if (actual === expected) {
+    return '✔';
+  }
+  return 'X';
+}
+
+console.log(test7());
