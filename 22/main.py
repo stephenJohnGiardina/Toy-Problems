@@ -1,4 +1,4 @@
-def generateParenthesis(n):
+def generateParentheses(n):
 
 def isValid(s):
     stack = []
@@ -40,8 +40,8 @@ def isValid(s):
 # TEST 1
 
 def test1():
-  actual = None
-  expected = None
+  actual = generateParentheses(3)
+  expected = ["((()))", "(()())", "(())()", "()(())", "()()()"]
   if (actual == expected):
     return '✔'
   return 'X'
@@ -51,8 +51,8 @@ print(test1())
 # TEST 2
 
 def test2():
-  actual = None
-  expected = None
+  actual = generateParentheses(1)
+  expected = ["()"]
   if (actual == expected):
     return '✔'
   return 'X'
