@@ -26,11 +26,11 @@ def initialize(directory):
     '\n',
     '  if (actual === expected) {',
     '\n',
-    '    return \'PASSED!\';',
+    '    return \'✔\';',
     '\n',
     '  }',
     '\n',
-    '  return \'FAILED!\';',
+    '  return \'X\';',
     '\n',
     '}',
     '\n\n',
@@ -46,11 +46,11 @@ def initialize(directory):
     '\n',
     '  if (actual === expected) {',
     '\n',
-    '    return \'PASSED!\';',
+    '    return \'✔\';',
     '\n',
     '  }',
     '\n',
-    '  return \'FAILED!\';',
+    '  return \'X\';',
     '\n',
     '}',
     '\n\n',
@@ -71,9 +71,9 @@ def initialize(directory):
     '\n',
     '  if actual == expected:',
     '\n',
-    '    return \'PASSED!\'',
+    '    return \'✔\'',
     '\n',
-    '  return \'FAILED!\'',
+    '  return \'X\'',
     '\n\n',
     'print(test1())',
     '\n\n',
@@ -87,9 +87,9 @@ def initialize(directory):
     '\n',
     '  if actual == expected:',
     '\n',
-    '    return \'PASSED!\'',
+    '    return \'✔\'',
     '\n',
-    '  return \'FAILED!\'',
+    '  return \'X\'',
     '\n\n',
     'print(test2())',
     '\n',
@@ -142,7 +142,8 @@ def obtain_number():
         ),
         choices=[
           "Yes",
-          "No"
+          "No",
+          "Quit initializing new problem"
         ]
       )
     ]
@@ -152,6 +153,8 @@ def obtain_number():
     if correct_choice_yes_or_no == "Yes":
       initialize(problem_number)
       break
+    elif correct_choice_yes_or_no == "Quit initializing new problem":
+      return
     else:
       continue
 
