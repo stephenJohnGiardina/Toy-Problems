@@ -27,7 +27,7 @@ def test1():
   actual = reverse(123)
   expected = 321
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -38,7 +38,7 @@ def test2():
   actual = reverse(-123)
   expected = -321
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -49,7 +49,7 @@ def test3():
   actual = reverse(432)
   expected = 234
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())
@@ -60,7 +60,7 @@ def test4():
   actual = reverse(987)
   expected = 789
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test4())
@@ -72,7 +72,7 @@ def test5():
   actual = reverse(1534236469)
   expected = 0
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test5())

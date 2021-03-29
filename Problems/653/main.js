@@ -65,7 +65,7 @@ function test1() {
   const actual = findTarget(root1, 9);
   const expected = true;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -78,7 +78,7 @@ function test2() {
   const actual = findTarget(root1, 28);
   const expected = false;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

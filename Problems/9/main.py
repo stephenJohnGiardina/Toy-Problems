@@ -23,7 +23,7 @@ def test1():
   actual = isPalendrome(121)
   expected = True
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -34,7 +34,7 @@ def test2():
   actual = isPalendrome(-121)
   expected = False
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -45,7 +45,7 @@ def test3():
   actual = isPalendrome(10)
   expected = False
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())

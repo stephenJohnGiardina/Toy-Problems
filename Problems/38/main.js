@@ -29,7 +29,7 @@ function test1() {
   const actual = countAndSay(1);
   const expected = '1';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -42,7 +42,7 @@ function test2() {
   const actual = countAndSay(4);
   const expected = '1211';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

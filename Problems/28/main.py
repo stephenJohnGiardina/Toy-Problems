@@ -16,7 +16,7 @@ class Solution:
 
 def test1():
   if Solution.strStr(None, "hello", "ll") == 2:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -26,7 +26,7 @@ print(test1())
 
 def test2():
   if Solution.strStr(None, "aaaaa", "bba") == -1:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -36,7 +36,7 @@ print(test2())
 
 def test3():
   if Solution.strStr(None, "", "") == 0:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -46,7 +46,7 @@ print(test3())
 
 def test4():
   if Solution.strStr(None, "a", "a") == 0:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 

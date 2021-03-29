@@ -13,7 +13,7 @@ def twoSum(nums, target):
 
 def test1():
   if twoSum([2, 7, 11, 15], 9):
-    return ✔
+    return $$$$$
   return X
 
 print(test1())
@@ -22,7 +22,7 @@ print(test1())
 
 def test2():
   if twoSum([3, 2, 4], 6):
-    return ✔
+    return $$$$$
   return X
 
 print(test2())

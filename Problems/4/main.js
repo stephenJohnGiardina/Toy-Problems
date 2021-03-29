@@ -47,7 +47,7 @@ function test1() {
   const actual = findMedianSortedArrays([1, 3], [2]);
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -60,7 +60,7 @@ function test2() {
   const actual = findMedianSortedArrays([1, 2], [3, 4]);
   const expected = 2.5;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -73,7 +73,7 @@ function test3() {
   const actual = findMedianSortedArrays([1, 3, 8, 9, 15], [7, 11, 18, 19, 21, 25]);
   const expected = 11;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -86,7 +86,7 @@ function test4() {
   const actual = findMedianSortedArrays([23, 26, 31, 35], [3, 5, 7, 9, 11, 16]);
   const expected = 13.5;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -99,7 +99,7 @@ function test5() {
   const actual = findMedianSortedArrays([0, 0], [0, 0]);
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -112,7 +112,7 @@ function test6() {
   const actual = findMedianSortedArrays([1, 2], [1, 1]);
   const expected = 1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

@@ -19,7 +19,7 @@ function test1() {
   const actual = strStr('hello', 'll');
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -32,7 +32,7 @@ function test2() {
   const actual = strStr('aaaaa', 'bba');
   const expected = -1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -45,7 +45,7 @@ function test3() {
   const actual = strStr('', '');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -58,7 +58,7 @@ function test4() {
   const actual = strStr('a', 'a');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

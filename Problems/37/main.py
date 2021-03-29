@@ -171,7 +171,7 @@ def test1():
   ]
   solveSudoku(board)
   if isSolved(board):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -192,7 +192,7 @@ def test2():
   ]
   solveSudoku(board)
   if isSolved(board):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

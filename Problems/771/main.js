@@ -21,7 +21,7 @@ function test1() {
   const actual = numJewelsInStones('aA', 'aAAbbbb');
   const expected = 3;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -34,7 +34,7 @@ function test2() {
   const actual = numJewelsInStones('z', 'ZZ');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

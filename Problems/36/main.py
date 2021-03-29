@@ -143,7 +143,7 @@ def test1():
   ])
   expected = True
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -164,7 +164,7 @@ def test2():
   ])
   expected = False
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -185,7 +185,7 @@ def test3():
   ])
   expected = True
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())

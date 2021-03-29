@@ -119,7 +119,7 @@ function test1() {
   const actual = divide(10, 3);
   const expected = 3;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -132,7 +132,7 @@ function test2() {
   const actual = divide(7, -3);
   const expected = -2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -145,7 +145,7 @@ function test3() {
   const actual = divide(-7, 3);
   const expected = -2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -158,7 +158,7 @@ function test4() {
   const actual = divide(-7, -3);
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -171,7 +171,7 @@ function test5() {
   const actual = divide(1, 1);
   const expected = 1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -184,7 +184,7 @@ function test6() {
   const actual = divide(-2147483648, -1);
   const expected = 2147483647;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

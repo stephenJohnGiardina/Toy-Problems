@@ -9,7 +9,7 @@ function test1() {
   let actual;
   let expected;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   } else {
     return "X";
   }
@@ -23,7 +23,7 @@ function test2() {
   let actual;
   let expected;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   } else {
     return "X";
   }

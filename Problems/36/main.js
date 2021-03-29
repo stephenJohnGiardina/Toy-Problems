@@ -157,7 +157,7 @@ function test1() {
   ]);
   const expected = true;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -180,7 +180,7 @@ function test2() {
   ]);
   const expected = false;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -203,7 +203,7 @@ function test3() {
   ]);
   const expected = true;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

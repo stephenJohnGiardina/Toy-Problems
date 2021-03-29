@@ -22,7 +22,7 @@ def test1():
   actual = countAndSay(1)
   expected = '1'
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -33,7 +33,7 @@ def test2():
   actual = countAndSay(4)
   expected = '1211'
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

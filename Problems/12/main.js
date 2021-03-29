@@ -55,7 +55,7 @@ function test1() {
   const actual = intToRoman(3);
   const expected = 'III';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -68,7 +68,7 @@ function test2() {
   const actual = intToRoman(4);
   const expected = 'IV';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -81,7 +81,7 @@ function test3() {
   const actual = intToRoman(9);
   const expected = 'IX';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -94,7 +94,7 @@ function test4() {
   const actual = intToRoman(58);
   const expected = 'LVIII';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -107,7 +107,7 @@ function test5() {
   const actual = intToRoman(1994);
   const expected = 'MCMXCIV';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -120,7 +120,7 @@ function test6() {
   const actual = intToRoman(10);
   const expected = 'X';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -133,7 +133,7 @@ function test7() {
   const actual = intToRoman(100);
   const expected = 'C';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

@@ -62,7 +62,7 @@ def test1():
   actual = str(linkedListToArray(swapPairs(head)))
   expected = str([2,1,4,3])
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -75,7 +75,7 @@ def test2():
   actual = str(linkedListToArray(swapPairs(head)))
   expected = str([2,1,3])
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -88,7 +88,7 @@ def test3():
   actual = str(linkedListToArray(swapPairs(head)))
   expected = str([1])
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -101,7 +101,7 @@ def test4():
   actual = str(linkedListToArray(swapPairs(head)))
   expected = str([7,0,6,2,8,6,3,0,5,4])
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 

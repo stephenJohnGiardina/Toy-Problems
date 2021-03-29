@@ -55,7 +55,7 @@ function test1() {
   const actual = convert('PAYPALISHIRING', 3);
   const expected = 'PAHNAPLSIIGYIR';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -68,7 +68,7 @@ function test2() {
   const actual = convert('PAYPALISHIRING', 4);
   const expected = 'PINALSIGYAHRPI';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -81,7 +81,7 @@ function test3() {
   const actual = convert('', 1);
   const expected = '';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

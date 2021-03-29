@@ -19,7 +19,7 @@ def test1():
   actual = maxArea([3, 2, 12, 4])
   expected = 9
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -30,7 +30,7 @@ def test2():
   actual = maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])
   expected = 49
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

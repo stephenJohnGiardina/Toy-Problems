@@ -59,7 +59,7 @@ function test1() {
   const actual = JSON.stringify(linkedListToArray(swapPairs(head)));
   const expected = JSON.stringify([2, 1, 4, 3]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -73,7 +73,7 @@ function test2() {
   const actual = JSON.stringify(linkedListToArray(swapPairs(head)));
   const expected = JSON.stringify([2, 1, 3]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -87,7 +87,7 @@ function test3() {
   const actual = JSON.stringify(linkedListToArray(swapPairs(head)));
   const expected = JSON.stringify([1]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -101,7 +101,7 @@ function test4() {
   const actual = JSON.stringify(linkedListToArray(swapPairs(head)));
   const expected = JSON.stringify([7, 0, 6, 2, 8, 6, 3, 0, 5, 4]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

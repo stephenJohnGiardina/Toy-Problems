@@ -88,7 +88,7 @@ function test1() {
   const actual = generateParenthesis(3);
   const expected = ["((()))", "(()())", "(())()", "()(())", "()()()"];
   if (arraysEqual(actual, expected)) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }
@@ -101,7 +101,7 @@ function test2() {
   const actual = generateParenthesis(1);
   const expected = ["()"];
   if (arraysEqual(actual, expected)) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }

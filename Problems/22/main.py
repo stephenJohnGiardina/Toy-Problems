@@ -43,7 +43,7 @@ def test1():
   actual = generateParentheses(3)
   expected = ["((()))", "(()())", "(())()", "()(())", "()()()"]
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -54,7 +54,7 @@ def test2():
   actual = generateParentheses(1)
   expected = ["()"]
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

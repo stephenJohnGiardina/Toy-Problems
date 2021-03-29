@@ -44,7 +44,7 @@ function test1() {
   const actual = threeSum([-1, 0, 1, 2, -1, -4]);
   const expected = [[-1, -1, 2], [-1, 0, 1]];
   if (arraysEqual(JSON.stringify(actual), JSON.stringify(expected))) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -64,7 +64,7 @@ function test2() {
     [-2, 0, 2],
   ];
   if (arraysEqual(JSON.stringify(actual), JSON.stringify(expected))) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

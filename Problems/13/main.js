@@ -36,7 +36,7 @@ function test1() {
   const actual = romanToInt('III');
   const expected = 3;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -49,7 +49,7 @@ function test2() {
   const actual = romanToInt('IV');
   const expected = 4;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -62,7 +62,7 @@ function test3() {
   const actual = romanToInt('IX');
   const expected = 9;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -75,7 +75,7 @@ function test4() {
   const actual = romanToInt('LVIII');
   const expected = 58;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -88,7 +88,7 @@ function test5() {
   const actual = romanToInt('MCMXCIV');
   const expected = 1994;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

@@ -10,7 +10,7 @@ def test1():
   actual = toLowerCase('Hello')
   expected = 'hello'
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -21,7 +21,7 @@ def test2():
   actual = toLowerCase('here')
   expected = 'here'
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -32,7 +32,7 @@ def test3():
   actual = toLowerCase('LOVELY')
   expected = 'lovely'
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())

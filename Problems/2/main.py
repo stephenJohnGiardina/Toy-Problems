@@ -84,7 +84,7 @@ def test1():
   l2 = [5, 6, 4]
   solution = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)))
   if solution == [7, 0, 8]:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -97,7 +97,7 @@ def test2():
   l2 = [5]
   solution = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)))
   if solution == [0, 1]:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -110,7 +110,7 @@ def test3():
   l2 = [0]
   solution = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)))
   if solution == [1, 8]:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -123,7 +123,7 @@ def test4():
   l2 = [5,6,4]
   solution = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)))
   if solution == [6,6,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -136,7 +136,7 @@ def test5():
   l2 = [1]
   solution = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)))
   if solution == [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 

@@ -13,7 +13,7 @@ def test1():
   actual = numJewelsInStones('aA', 'aAAbbbb')
   expected = 3
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -24,7 +24,7 @@ def test2():
   actual = numJewelsInStones('z', 'ZZ')
   expected = 0
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

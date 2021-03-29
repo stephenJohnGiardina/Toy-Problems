@@ -43,7 +43,7 @@ def test1():
   actual = search([4, 5, 6, 7, 0, 1, 2], 0)
   expected = 4
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -54,7 +54,7 @@ def test2():
   actual = search([4, 5, 6, 7, 0, 1, 2], 3)
   expected = -1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -65,7 +65,7 @@ def test3():
   actual = search([1, 3], 1)
   expected = 0
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())
@@ -76,7 +76,7 @@ def test4():
   actual = search([3, 1], 1)
   expected = 1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test4())
@@ -87,7 +87,7 @@ def test5():
   actual = search([], 5)
   expected = -1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test5())
@@ -98,7 +98,7 @@ def test6():
   actual = search([1], 2)
   expected = -1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test6())
@@ -109,7 +109,7 @@ def test7():
   actual = search([3, 1], 0)
   expected = -1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test7())
@@ -120,7 +120,7 @@ def test8():
   actual = search([5, 1, 3], 3)
   expected = 2
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test8())
@@ -131,7 +131,7 @@ def test9():
   actual = search([1], 0)
   expected = -1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test9())
@@ -142,7 +142,7 @@ def test10():
   actual = search([1, 3], 3)
   expected = 1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test10())

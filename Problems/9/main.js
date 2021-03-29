@@ -27,7 +27,7 @@ function test1() {
   const actual = isPalendrome(121);
   const expected = true;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -40,7 +40,7 @@ function test2() {
   const actual = isPalendrome(-121);
   const expected = false;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -53,7 +53,7 @@ function test3() {
   const actual = isPalendrome(10);
   const expected = false;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

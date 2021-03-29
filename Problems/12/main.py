@@ -50,7 +50,7 @@ def test1():
   actual = intToRoman(3)
   expected = 'III'
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -61,7 +61,7 @@ def test2():
   actual = intToRoman(4)
   expected = 'IV'
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -72,7 +72,7 @@ def test3():
   actual = intToRoman(9)
   expected = 'IX'
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())
@@ -83,7 +83,7 @@ def test4():
   actual = intToRoman(58)
   expected = 'LVIII'
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test4())
@@ -94,7 +94,7 @@ def test5():
   actual = intToRoman(1994)
   expected = 'MCMXCIV'
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test5())
@@ -105,7 +105,7 @@ def test6():
   actual = intToRoman(10)
   expected = 'X'
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test6())
@@ -116,7 +116,7 @@ def test7():
   actual = intToRoman(100)
   expected = 'C'
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test7())

@@ -54,7 +54,7 @@ function test1() {
   const actual = JSON.stringify(linkedListToArray(mergeKLists(lists)));
   const expected = JSON.stringify([1, 1, 2, 3, 4, 4, 5, 6]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -69,7 +69,7 @@ function test2() {
   const actual = JSON.stringify(linkedListToArray(mergeKLists(lists)));
   const expected = JSON.stringify([1]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -87,7 +87,7 @@ function test3() {
   const actual = JSON.stringify(linkedListToArray(mergeKLists(lists)));
   const expected = JSON.stringify([-1, 5, 6, 10, 11]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

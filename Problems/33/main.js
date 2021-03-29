@@ -47,7 +47,7 @@ function test1() {
   const actual = search([4, 5, 6, 7, 0, 1, 2], 0);
   const expected = 4;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -60,7 +60,7 @@ function test2() {
   const actual = search([4, 5, 6, 7, 0, 1, 2], 3);
   const expected = -1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -73,7 +73,7 @@ function test3() {
   const actual = search([1, 3], 1);
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -86,7 +86,7 @@ function test4() {
   const actual = search([3, 1], 1);
   const expected = 1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -99,7 +99,7 @@ function test5() {
   const actual = search([], 5);
   const expected = -1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -112,7 +112,7 @@ function test6() {
   const actual = search([1], 2);
   const expected = -1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -125,7 +125,7 @@ function test7() {
   const actual = search([3, 1], 0);
   const expected = -1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -138,7 +138,7 @@ function test8() {
   const actual = search([5, 1, 3], 3);
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -151,7 +151,7 @@ function test9() {
   const actual = search([1], 0);
   const expected = -1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

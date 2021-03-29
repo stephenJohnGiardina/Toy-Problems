@@ -80,7 +80,7 @@ function test1() {
   const actual = mergeTwoLists(node1, node4);
   const expected = [1, 1, 2, 3, 4, 4];
   if (arraysEqual(linkedListToArray(actual), expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -104,7 +104,7 @@ function test2() {
   const actual = mergeTwoLists(node1, null);
   const expected = [-10, -6, -6, -6, -3, 5];
   if (arraysEqual(linkedListToArray(actual), expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

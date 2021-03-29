@@ -14,7 +14,7 @@ function test1() {
   const actual = defangIPaddr('1.1.1.1');
   const expected = '1[.]1[.]1[.]1';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -27,7 +27,7 @@ function test2() {
   const actual = defangIPaddr('255.100.50.0');
   const expected = '255[.]100[.]50[.]0';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

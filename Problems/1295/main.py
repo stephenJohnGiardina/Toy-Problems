@@ -14,7 +14,7 @@ def test1():
   actual = findNumbers([12, 345, 2, 6, 7896])
   expected = 2
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -25,7 +25,7 @@ def test2():
   actual = findNumbers([555, 901, 482, 1771])
   expected = 1
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

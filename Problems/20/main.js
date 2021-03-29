@@ -41,7 +41,7 @@ function test1() {
   const actual = isValid("()");
   const expected = true;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }
@@ -54,7 +54,7 @@ function test2() {
   const actual = isValid("()[]{}");
   const expected = true;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }
@@ -67,7 +67,7 @@ function test3() {
   const actual = isValid("(]");
   const expected = false;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }
@@ -80,7 +80,7 @@ function test4() {
   const actual = isValid("([)]");
   const expected = false;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }
@@ -93,7 +93,7 @@ function test5() {
   const actual = isValid("{[]}");
   const expected = true;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }
@@ -106,7 +106,7 @@ function test6() {
   const actual = isValid("[");
   const expected = false;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }
@@ -119,7 +119,7 @@ function test7() {
   const actual = isValid("(){}}{");
   const expected = false;
   if (actual === expected) {
-    return "✔";
+    return "$$$$$";
   }
   return "X";
 }

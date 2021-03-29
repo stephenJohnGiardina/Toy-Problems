@@ -24,7 +24,7 @@ function test1() {
   const actual = JSON.stringify(twoSum([2, 7, 11, 15], 9));
   const expected = JSON.stringify([0, 1]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -37,7 +37,7 @@ function test2() {
   const actual = JSON.stringify(twoSum([3, 3], 6));
   const expected = JSON.stringify([0, 1]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

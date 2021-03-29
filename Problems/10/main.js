@@ -41,7 +41,7 @@ function test1() {
   const actual = isMatch('aa', 'a');
   const expected = false;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -54,7 +54,7 @@ function test2() {
   const actual = isMatch('aa', 'a*');
   const expected = true;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -67,7 +67,7 @@ function test3() {
   const actual = isMatch('ab', '.*');
   const expected = true;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -80,7 +80,7 @@ function test4() {
   const actual = isMatch('aab', 'c*a*b');
   const expected = true;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -93,7 +93,7 @@ function test5() {
   const actual = isMatch('mississippi', 'mis*is*p*.');
   const expected = false;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

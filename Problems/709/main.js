@@ -14,7 +14,7 @@ function test1() {
   const actual = toLowerCase('Hello');
   const expected = 'hello';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -27,7 +27,7 @@ function test2() {
   const actual = toLowerCase('here');
   const expected = 'here';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -40,7 +40,7 @@ function test3() {
   const actual = toLowerCase('LOVELY');
   const expected = 'lovely';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

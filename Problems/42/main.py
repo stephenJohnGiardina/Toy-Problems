@@ -30,7 +30,7 @@ def test1():
   actual = trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])
   expected = 6
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -41,7 +41,7 @@ def test2():
   actual = trap([1, 0, 1, 0, 1])
   expected = 2
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -52,7 +52,7 @@ def test3():
   actual = trap([0, 5, 6, 4, 6, 1, 0, 0, 2, 7])
   expected = 23
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())

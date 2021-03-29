@@ -21,7 +21,7 @@ function test1() {
   const actual = removeElement([3, 2, 2, 3], 3);
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -34,7 +34,7 @@ function test2() {
   const actual = removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2);
   const expected = 5;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

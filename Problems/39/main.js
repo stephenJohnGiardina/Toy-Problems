@@ -18,7 +18,7 @@ function test1() {
     [2, 2, 3],
   ]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -35,7 +35,7 @@ function test2() {
     [3, 5],
   ]);
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

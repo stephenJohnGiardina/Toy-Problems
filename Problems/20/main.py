@@ -40,7 +40,7 @@ def test1():
     actual = isValid("()")
     expected = True
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test1())
@@ -51,7 +51,7 @@ def test2():
     actual = isValid("()[]{}")
     expected = True
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test2())
@@ -62,7 +62,7 @@ def test3():
     actual = isValid("(]")
     expected = False
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test3())
@@ -73,7 +73,7 @@ def test4():
     actual = isValid("([)]")
     expected = False
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test4())
@@ -84,7 +84,7 @@ def test5():
     actual = isValid("{[]}")
     expected = True
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test5())
@@ -95,7 +95,7 @@ def test6():
     actual = isValid("[")
     expected = False
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test6())
@@ -106,7 +106,7 @@ def test7():
     actual = isValid("]")
     expected = False
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test7())
@@ -117,7 +117,7 @@ def test8():
     actual = isValid("(){" + "}" + "}{") # Divided to avoid python string formatting behavior
     expected = False
     if actual == expected:
-        return "✔"
+        return "$$$$$"
     return "X"
 
 print(test8())

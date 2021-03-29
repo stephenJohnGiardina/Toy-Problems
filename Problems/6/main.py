@@ -39,7 +39,7 @@ def test1():
   actual = convert('PAYPALISHIRING', 3)
   expected = 'PAHNAPLSIIGYIR'
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -50,7 +50,7 @@ def test2():
   actual = convert('PAYPALISHIRING', 4)
   expected = 'PINALSIGYAHRPI'
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -61,7 +61,7 @@ def test3():
   actual = convert('', 1)
   expected = ''
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())

@@ -43,7 +43,7 @@ def test1():
   actual = findTarget(node1, 9)
   expected = True
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -54,7 +54,7 @@ def test2():
   actual = findTarget(node1, 28)
   expected = False
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

@@ -30,7 +30,7 @@ def test1():
   actual = threeSum([-1, 0, 1, 2, -1, -4])
   expected = [[-1, -1, 2], [-1, 0, 1]]
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -48,7 +48,7 @@ def test2():
     [-2, 0, 2],
   ]
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

@@ -17,7 +17,7 @@ def test1():
   actual = countGoodTriplets([3, 0, 1, 1, 9, 7], 7, 2, 3)
   expected = 4
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -29,7 +29,7 @@ def test2():
   actual = countGoodTriplets([1, 1, 2, 2, 3], 0, 0, 1)
   expected = 0
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 

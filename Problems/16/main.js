@@ -25,7 +25,7 @@ function test1() {
   const actual = threeSumClosest([-1, 2, 1, -4], 1);
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

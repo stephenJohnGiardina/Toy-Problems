@@ -46,7 +46,7 @@ def test1():
   actual = linkedListToArray(mergeKLists(lists))
   expected = [1, 1, 2, 3, 4, 4, 5, 6]
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -60,7 +60,7 @@ def test2():
   actual = linkedListToArray(mergeKLists(lists))
   expected = [1]
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 
@@ -77,7 +77,7 @@ def test3():
   actual = linkedListToArray(mergeKLists(lists))
   expected = [-1,5,6,10,11]
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   else:
     return 'X'
 

@@ -204,7 +204,7 @@ function test1() {
   ];
   solveSudoku(board);
   if (isSolved(board)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -227,7 +227,7 @@ function test2() {
   ];
   solveSudoku(board);
   if (isSolved(board)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

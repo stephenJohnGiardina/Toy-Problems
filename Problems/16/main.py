@@ -26,7 +26,7 @@ def test1():
   actual = threeSumClosest([-1, 2, 1, -4], 1)
   expected = 2
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())

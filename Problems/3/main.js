@@ -96,7 +96,7 @@ const lengthOfLongestSubstringRecursiveSolution = (s) => {
 
 function test1() {
   if (lengthOfLongestSubstring('') === 0) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -107,7 +107,7 @@ console.log(test1());
 
 function test2() {
   if (lengthOfLongestSubstring(' ') === 1) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -118,7 +118,7 @@ console.log(test2());
 
 function test3() {
   if (lengthOfLongestSubstring('abcb') === 3) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -129,7 +129,7 @@ console.log(test3());
 
 function test4() {
   if (lengthOfLongestSubstring('suqqjkuuxfeinpgjucmoc') === 12) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -140,7 +140,7 @@ console.log(test4());
 
 function test5() {
   if (lengthOfLongestSubstring('mrjkdfwfsfjoblbhtjcpdbjdqkvevshhjssnzosstdgwqhelqibumkzcwujsnsbyktlkkgeflkectkpjuqfgdgjbduvqm') === 12) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

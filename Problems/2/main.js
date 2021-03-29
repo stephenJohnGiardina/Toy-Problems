@@ -156,7 +156,7 @@ function test1() {
   const actual = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)));
   const expected = [7, 0, 8];
   if (arraysEqual(actual, expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -171,7 +171,7 @@ function test2() {
   const actual = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)));
   const expected = [0, 1];
   if (arraysEqual(actual, expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -186,7 +186,7 @@ function test3() {
   const actual = linkedListToArray(addTwoNumbers(arrayToLinkedList(l1), arrayToLinkedList(l2)));
   const expected = [1, 8];
   if (arraysEqual(actual, expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -203,7 +203,7 @@ function test4() {
   const expected = [6, 6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
   if (arraysEqual(actual, expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -224,7 +224,7 @@ function test5() {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1];
   if (arraysEqual(actual, expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

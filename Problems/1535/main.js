@@ -34,7 +34,7 @@ function test1() {
   const actual = getWinner([2, 1, 3, 5, 4, 6, 7], 2);
   const expected = 5;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -47,7 +47,7 @@ function test2() {
   const actual = getWinner([3, 2, 1], 10);
   const expected = 3;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -60,7 +60,7 @@ function test3() {
   const actual = getWinner([1, 9, 8, 2, 3, 7, 6, 4, 5], 7);
   const expected = 9;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -73,7 +73,7 @@ function test4() {
   const actual = getWinner([1, 11, 22, 33, 44, 55, 66, 77, 88, 99], 1000000000);
   const expected = 99;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

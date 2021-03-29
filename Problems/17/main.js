@@ -48,7 +48,7 @@ function test1() {
     'cd', 'ce', 'cf',
   ];
   if (arraysEqual(actual, expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -61,7 +61,7 @@ function test2() {
   const actual = letterCombinations('');
   const expected = [];
   if (arraysEqual(actual, expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

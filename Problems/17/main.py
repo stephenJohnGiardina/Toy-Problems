@@ -33,7 +33,7 @@ def test1():
     'cd', 'ce', 'cf',
   ]
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -44,7 +44,7 @@ def test2():
   actual = letterCombinations('')
   expected = []
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

@@ -33,7 +33,7 @@ function test1() {
   const actual = reverse(123);
   const expected = 321;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -46,7 +46,7 @@ function test2() {
   const actual = reverse(-123);
   const expected = -321;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -59,7 +59,7 @@ function test3() {
   const actual = reverse(432);
   const expected = 234;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -72,7 +72,7 @@ function test4() {
   const actual = reverse(987);
   const expected = 789;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -85,7 +85,7 @@ function test5() {
   const actual = reverse(1534236469);
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

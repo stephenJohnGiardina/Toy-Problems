@@ -29,7 +29,7 @@ function test1() {
   const actual = countGoodTriplets([3, 0, 1, 1, 9, 7], 7, 2, 3);
   const expected = 4;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -42,7 +42,7 @@ function test2() {
   const actual = countGoodTriplets([1, 1, 2, 2, 3], 0, 0, 1);
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

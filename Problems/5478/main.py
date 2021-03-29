@@ -9,7 +9,7 @@ def test1():
   actual = None
   expected = None
   if actual == expected:
-    return "✔"
+    return "$$$$$"
   else:
     return "X"
 
@@ -21,7 +21,7 @@ def test2():
   actual = None
   expected = None
   if actual == expected:
-    return "✔"
+    return "$$$$$"
   else:
     return "X"
 

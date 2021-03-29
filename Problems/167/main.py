@@ -16,7 +16,7 @@ def test1():
   actual = twoSum([2, 7, 11, 15], 9)
   expected = [1, 2]
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -27,7 +27,7 @@ def test2():
   actual = twoSum([3, 3], 6)
   expected = [1, 2]
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

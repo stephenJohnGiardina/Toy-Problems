@@ -20,7 +20,7 @@ function test1() {
   const actual = findNumbers([12, 345, 2, 6, 7896]);
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -33,7 +33,7 @@ function test2() {
   const actual = findNumbers([555, 901, 482, 1771]);
   const expected = 1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

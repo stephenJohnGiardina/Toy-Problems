@@ -20,7 +20,7 @@ def test1():
   actual = fourSum([1, 0, -1, 0, -2, 2], 0)
   expected = [[-2, -1, 1, 2], [-2, 0, 0, 2], [-1, 0, 0, 1]]
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -40,7 +40,7 @@ def test2():
     [-1, 0, 0, 1],
   ]
   if actual == expected:
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())

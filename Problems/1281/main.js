@@ -21,7 +21,7 @@ function test1() {
   const actual = subtractProductAndSum(234);
   const expected = 15;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -34,7 +34,7 @@ function test2() {
   const actual = subtractProductAndSum(4421);
   const expected = 21;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

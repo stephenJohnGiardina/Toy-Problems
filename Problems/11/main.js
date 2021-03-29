@@ -26,7 +26,7 @@ function test1() {
   const actual = maxArea([3, 2, 12, 4]);
   const expected = 9;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -39,7 +39,7 @@ function test2() {
   const actual = maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]);
   const expected = 49;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

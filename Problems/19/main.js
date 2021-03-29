@@ -72,7 +72,7 @@ function test1() {
   const actual = removeNthFromEnd(node1, 2);
   const expected = [1, 2, 3, 5];
   if (arraysEqual(linkedListToArray(actual), expected)) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -87,7 +87,7 @@ function test2() {
   const actual = (removeNthFromEnd(node1, 1));
   const expected = null;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

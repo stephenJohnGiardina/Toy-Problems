@@ -29,7 +29,7 @@ def test1():
   actual = romanToInt('III')
   expected = 3
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test1())
@@ -40,7 +40,7 @@ def test2():
   actual = romanToInt('IV')
   expected = 4
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test2())
@@ -51,7 +51,7 @@ def test3():
   actual = romanToInt('IX')
   expected = 9
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test3())
@@ -62,7 +62,7 @@ def test4():
   actual = romanToInt('LVIII')
   expected = 58
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test4())
@@ -73,7 +73,7 @@ def test5():
   actual = romanToInt('MCMXCIV')
   expected = 1994
   if (actual == expected):
-    return '✔'
+    return '$$$$$'
   return 'X'
 
 print(test5())

@@ -14,7 +14,7 @@ function test1() {
   const actual;
   const expected;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -27,7 +27,7 @@ function test2() {
   const actual;
   const expected;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

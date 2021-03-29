@@ -80,7 +80,7 @@ function test1() {
   const actual = longestPalindrome('babad');
   const expected = 'bab';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -93,7 +93,7 @@ function test2() {
   const actual = longestPalindrome('cbbd');
   const expected = 'bb';
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

@@ -49,7 +49,7 @@ function test1() {
   const actual = myAtoi('42');
   const expected = 42;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -62,7 +62,7 @@ function test2() {
   const actual = myAtoi('   -42');
   const expected = -42;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -75,7 +75,7 @@ function test3() {
   const actual = myAtoi('4193 with words');
   const expected = 4193;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -88,7 +88,7 @@ function test4() {
   const actual = myAtoi('words and 987');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -101,7 +101,7 @@ function test5() {
   const actual = myAtoi('-91283472332');
   const expected = -2147483648;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -114,7 +114,7 @@ function test6() {
   const actual = myAtoi('');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -127,7 +127,7 @@ function test7() {
   const actual = myAtoi('-');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -140,7 +140,7 @@ function test8() {
   const actual = myAtoi('+1');
   const expected = 1;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -153,7 +153,7 @@ function test9() {
   const actual = myAtoi('+-2');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -166,7 +166,7 @@ function test10() {
   const actual = myAtoi('   +0 123');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -179,7 +179,7 @@ function test11() {
   const actual = myAtoi('0-1');
   const expected = 0;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }

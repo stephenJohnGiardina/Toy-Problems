@@ -37,7 +37,7 @@ function test1() {
   const actual = trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]);
   const expected = 6;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -50,7 +50,7 @@ function test2() {
   const actual = trap([1, 0, 1, 0, 1]);
   const expected = 2;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
@@ -63,7 +63,7 @@ function test3() {
   const actual = trap([0, 5, 6, 4, 6, 1, 0, 0, 2, 7]);
   const expected = 23;
   if (actual === expected) {
-    return '✔';
+    return '$$$$$';
   }
   return 'X';
 }
