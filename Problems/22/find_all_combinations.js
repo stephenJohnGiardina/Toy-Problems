@@ -4,9 +4,10 @@ const find_combinations = (num, string = "", options = null) => {
     options = [];
     for (let i = 0; i < num; i++) {
       options.push("(", ")");
+      // options.push(i);
     }
   }
-  if (num === 0) {
+  if (options.length === 0) {
     result.push(string);
     return result;
   }
@@ -19,10 +20,11 @@ const find_combinations = (num, string = "", options = null) => {
       )
     );
   }
-  return result;
+  return Array.from(new Set(result));
 };
 
 // console.log(find_combinations(0));
 console.log(find_combinations(1));
 // console.log(find_combinations(2));
 // console.log(find_combinations(3));
+// console.log(find_combinations(4));

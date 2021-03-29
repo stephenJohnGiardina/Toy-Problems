@@ -3,26 +3,42 @@
  * @return {string[]}
  */
 var generateParenthesis = function (n) {
-  allCharacters = "";
-  for (let i = 0; i < n; i++) {
-    allCharacters += "()";
-  }
-  allCombinations = [];
+  allCombinations = find_combinations(n)
 
   validCombinations = [];
-  for (i = 0; i < allCharacters.length; i++) {
-    if (isValid(allCombinations[i])) {
-      validCombinations.push(allCombinations[i]);
+  for (i = 0; i < allCombinations.length; i++) {
+    let currentParentheses = allCombinations[i]
+    if (isValid(currentParentheses) && validCombinations.indexOf(currentParentheses === -1)) {
+      validCombinations.push(currentParentheses);
     }
   }
+  validCombinations = validCombinations.sort();
   return validCombinations;
 };
 
-const findAllCombinations = (characters) => {
-  if (!characters.length) {
-    return "";
-  } else {
+const find_combinations = (num, string = "", options = null) => {
+  let result = [];
+  if (options === null) {
+    options = [];
+    for (let i = 0; i < num; i++) {
+      options.push("(", ")");
+      // options.push(i);
+    }
   }
+  if (options.length === 0) {
+    result.push(string);
+    return result;
+  }
+  for (let i = 0; i < options.length; i++) {
+    result = result.concat(
+      find_combinations(
+        num - 1,
+        string + options[i],
+        options.slice(0, i).concat(options.slice(i + 1))
+      )
+    );
+  }
+  return Array.from(new Set(result));
 };
 
 const isValid = (s) => {
@@ -58,12 +74,20 @@ const isValid = (s) => {
 
 // TEST SUITE
 
+const arraysEqual = (array1, array2) => {
+  if (array1.length !== array2.length) return false;
+  for (let i = 0; i < array1.length; i += 1) {
+    if (array1[i] !== array2[i]) return false;
+  }
+  return true;
+}
+
 // TEST 1
 
 function test1() {
   const actual = generateParenthesis(3);
   const expected = ["((()))", "(()())", "(())()", "()(())", "()()()"];
-  if (actual === expected) {
+  if (arraysEqual(actual, expected)) {
     return "✔";
   }
   return "X";
@@ -76,7 +100,7 @@ console.log(test1());
 function test2() {
   const actual = generateParenthesis(1);
   const expected = ["()"];
-  if (actual === expected) {
+  if (arraysEqual(actual, expected)) {
     return "✔";
   }
   return "X";
