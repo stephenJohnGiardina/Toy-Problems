@@ -13,11 +13,11 @@ A sudoku solution must satisfy all of the following rules:
 
 Empty cells are indicated by the character '.'.
 
-<img src="../pictures/37.png">
+<img src="../../pictures/37.png">
 
 A sudoku puzzle...
 
-<img src="../pictures/37(1).png">
+<img src="../../pictures/37(1).png">
 
 ...and its solution numbers marked in red.
 
